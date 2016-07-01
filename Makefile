@@ -6,7 +6,7 @@ SUPERGLUE_FLAGS=-pthread -I$(SUPERGLUE_DIR)  #-pedantic -Wno-long-long -Wno-form
 SOURCE_DIR=./src
 HEADER_DIR=./include
 CPP=g++
-
+FMM_FLAGS=-I$(HEADER_DIR)
 
 
 #-----------------------GCC Compiler set---------------------
@@ -14,7 +14,7 @@ CPP=g++
 	OPTIM_FLAGS=-mavx -march=bdver1 -mfma4 -Ofast  -Wwrite-strings
 	SPECIAL_FLAGS=$(OPTIM_FLAGS)     
 	LINK_FLAGS=-lm -lrt -lpthread
-	COMP_FLAGS= $(SUPERGLUE_FLAGS) $(DUCTTEIP_FLAGS) -std=c++11 $(SPECIAL_FLAGS) 
+	COMP_FLAGS= $(SUPERGLUE_FLAGS) $(FMM_FLAGS) -std=c++11 $(SPECIAL_FLAGS) 
 
 #########################################################
 headers:=$(notdir $(shell ls -Sr $(SOURCE_DIR)/*.cpp))
