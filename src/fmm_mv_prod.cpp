@@ -1,4 +1,7 @@
 #include "fmm.hpp"
+#include "sg/superglue.hpp"
+#include "sg/option/instr_trace.hpp"
+
 extern Config config;
 
 Matrix &MatVec_old(Matrix &x ,  Tree & OT){
@@ -125,13 +128,18 @@ void cblas_dgemv(const int layout,
         }
      }
  }
-class SGTaskGemv{
+
+class SGTaskGemv : public Task<Options, 3> {
 private:
     SGMatrix *A,*v,*y;
 public:
     bool transA;
-    enum{Read,Write,Add};
+    enum{
+		Read=ReadWriteAdd::read,
+		Write=ReadWriteAdd::write,
+		Add=ReadWriteAdd::add};
     enum{COL_MAJOR,ROW_MAJOR};
+	std::string get_name() { return "A"; }
     SGTaskGemv(SGMatrix &A_, SGMatrix &v_, int i1,SGMatrix &Y_, int i2){
         A = &A_;
         v = &v_.get_part(i1);
@@ -145,19 +153,19 @@ public:
         register_args();
     }
     void register_args(){
-        Handle hA = A->get_handle();
-        Handle hv = v->get_handle();
-        Handle hy = y->get_handle();
-        register_access(Read, hA);
-        register_access(Read, hv);
+        SGHandle &hA = A->get_handle();
+        SGHandle &hv = v->get_handle();
+        SGHandle &hy = y->get_handle();
+        register_access(ReadWriteAdd::read, hA);
+        register_access(ReadWriteAdd::read, hv);
         if ( config.w )
-            register_access(Write, hy);
+            register_access(ReadWriteAdd::write, hy);
         else
-            register_access(Add, hy);
+            register_access(ReadWriteAdd::add, hy);
         transA = false;
 
     }
-    void register_access(int axs, Handle &h){}
+    //void register_access(int axs, SGHandle &h){}
     void run(){
         const int M = A->get_matrix()->rows();
         const int N = A->get_matrix()->cols();
@@ -186,8 +194,11 @@ public:
     }
 };
 void submit(SGTaskGemv *t){
-    if (config.s and !config.t)
+    if (config.s and !config.t){
         t->run();
+		return;
+	}
+	sgEngine->submit(t);
 }
 void gemv_leaves(SGMatrix &V, SGMatrix &x, SGMatrix &S, int group){
     SGTaskGemv *t= new SGTaskGemv(V,x,group,S,group);

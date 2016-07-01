@@ -5,6 +5,10 @@
 #include <sstream>
 
 #include "fmm.hpp"
+#include "sg/superglue.hpp"
+#include "sg/option/instr_trace.hpp"
+
+SuperGlue<Options> *sgEngine;
 using namespace std;
 
 void test2(){
@@ -370,7 +374,7 @@ void parse_args(int argc , char *argv[]){
     config.O = !config.S;
     config.w = !config.a;
     config.s = !config.t;
-
+	strcpy(config.indir,argv[4]);
 }
 void initialize(){
 }
@@ -379,8 +383,9 @@ void nbody_solver(){
 void fmm_solver(){
     Tree &OT=*new Tree;
     char f1[100],f2[100];
-    sprintf(f1,"tree_%d_%d.txt",N,L);
-    sprintf(f2,"tree_op_%d_%d.txt",N,L);
+	
+    sprintf(f1,"%s/tree_%d_%d.txt",config.indir,N,L);
+    sprintf(f2,"%s/tree_op_%d_%d.txt",config.indir,N,L);
     Matrix &pts = *new Matrix (N,3);
     Reader rdr(f1,f2,OT);
     rdr.read();
@@ -406,20 +411,28 @@ void fmm_solver(){
 }
 int main(int argc , char *argv[])
 {
-    if ( argc <2){
-        fprintf(stderr,"Usage %s N L nfstSOwa\n",argv[0]);
+    if ( argc <4){
+        fprintf(stderr,"Usage %s N L nfstSOwa input_dir\n",argv[0]);
         exit(-1);
     }
     N=atoi(argv[1]);
     L=atoi(argv[2]);
     parse_args(argc,argv);
 
+	sgEngine = new SuperGlue<Options>(-1);
     tic();
     fmm_solver();
+	sgEngine->barrier();
 
     cout << " Finished. Time(s): " << toc() << endl;
-
+    char trace[25];
+    sprintf(trace,"trace_%c_%c_%c_%c.txt",
+            config.n?'n':'f',
+            config.s?'s':'t',
+            config.S?'S':'O',
+            config.w?'w':'a'
+            );
+	Trace<Options>::dump(trace);
 }
-
 
 

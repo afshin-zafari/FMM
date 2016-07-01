@@ -2,12 +2,24 @@
 #define SGMATRIX_HPP_INCLUDED
 
 #include "xtype.hpp"
-typedef unsigned long Handle;
+#include "sg/superglue.hpp"
+#include "sg/option/instr_trace.hpp"
+
+struct Options : public DefaultOptions<Options> {
+    typedef Enable TaskName;
+    typedef Trace<Options> Instrumentation;
+};
+
+#define SGHandle Handle<Options> 
+extern SuperGlue<Options> *sgEngine;
+
+typedef unsigned long MyHandle;
 typedef unsigned int uint;
 
 class SGMatrix: public XType
 {
-    Handle *sg_handle;
+    MyHandle *sg_handle;
+	SGHandle *sgHandle;
     Matrix *M;
     vector<SGMatrix*> pcols,prows,parts;
     bool trans;
@@ -16,14 +28,16 @@ public:
     //using XType::operator=;
     SGMatrix(const char *p):XType(p,(void *)this)
     {
-        sg_handle  = new Handle(++LastHandle);
+        sg_handle  = new MyHandle(++LastHandle);
+		sgHandle = new SGHandle;
         trans= false;
         M=NULL;
         //cout << "last-h: "<< LastHandle << endl;
         //cout << "  sg-h: "<< *sg_handle << endl;
     }
     SGMatrix(Matrix &m):XType("",(void *)this){
-        sg_handle = new Handle(++LastHandle);
+        sg_handle = new MyHandle(++LastHandle);
+		sgHandle = new SGHandle;
         trans=false;
         M = &m;
     }
@@ -71,12 +85,12 @@ public:
         if (!mult->get_right_node()->is_plain())
             return;
         SGMatrix *lfm=(SGMatrix *)left->hx();
-        Handle lfh = lfm->get_handle();
+        MyHandle lfh = lfm->get_myhandle();
         if (rr->is_plain())
         {
             //cout << "a=bc+a" << endl;
             SGMatrix *rrm=(SGMatrix *)rr->hx();
-            Handle rrh = rrm->get_handle();
+            MyHandle rrh = rrm->get_myhandle();
             if ( rrh != lfh)
                 return;
 
@@ -86,7 +100,7 @@ public:
             //cout << "a=a+bc" << endl;
             //cout << rl->namex() << endl;
             SGMatrix *rlm=(SGMatrix *)rl->hx();
-            Handle rlh = rlm->get_handle();
+            MyHandle rlh = rlm->get_myhandle();
             if ( rlh != lfh)
                 return;
         }
@@ -106,13 +120,17 @@ public:
     {
         return M;
     }
-    Handle get_handle()
+    MyHandle get_myhandle()
     {
         return *sg_handle;
     }
+	SGHandle &get_handle(){
+		return *sgHandle;
+	}
     SGMatrix():XType("X",(void *)this)
     {
-        sg_handle = new Handle(++LastHandle);
+        sg_handle = new MyHandle(++LastHandle);
+		sgHandle = new SGHandle;
         trans=false;
     }
     typedef enum Partition {Column,Row} Partition;

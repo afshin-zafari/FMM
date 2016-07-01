@@ -13,7 +13,7 @@ FMM_FLAGS=-I$(HEADER_DIR)
 	GCOV_FLAGS=-fprofile-arcs -ftest-coverage
 	OPTIM_FLAGS=-mavx -march=bdver1 -mfma4 -Ofast  -Wwrite-strings
 	SPECIAL_FLAGS=$(OPTIM_FLAGS)     
-	LINK_FLAGS=-lm -lrt -lpthread
+	LINK_FLAGS=-lm -lrt -lpthread -Wl,--allow-multiple-definition
 	COMP_FLAGS= $(SUPERGLUE_FLAGS) $(FMM_FLAGS) -std=c++11 $(SPECIAL_FLAGS) 
 
 #########################################################
@@ -27,7 +27,7 @@ $(objects):  $(outdir)/%.o:  $(SOURCE_DIR)/%.cpp #$(HEADER_DIR)/%.hpp
 	$(info compile $(notdir $<) )
 	@$(CPP) -c -o $@ $< $(COMP_FLAGS)
 $(app): $(objects)
-	@$(CPP) -o $(app) $(objects) 
+	@$(CPP) -o $(app) $(objects) $(LINK_FLAGS)
 
 
 clean: 

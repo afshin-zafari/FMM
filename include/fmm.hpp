@@ -195,7 +195,7 @@ public:
     int i,j,ni,nj,p;
     Matrix *M;
     SGMatrix *sgMat;
-    Handle handle;
+    SGHandle handle;
 
     NearFieldBlock(int ii,int jj,int nni,int nnj,int pp,Matrix *MM):
         i(ii),j(jj),ni(nni),nj(nnj),p(pp),M(MM){
@@ -205,13 +205,12 @@ public:
 };
 struct Partition {
 public:
-    Partition(int i, int _n, double *m):index(i),n(_n){
-        handle =0;
+    Partition(int i, int _n, double *m):index(i),n(_n){        
         memory = m;
     }
     int index,n;
     double *memory;
-    Handle handle;
+    SGHandle handle;
 };
 typedef elastic_vect<Partition*> PartitionedVector;
 class Tree{
@@ -243,6 +242,7 @@ public:
 struct Config{
     bool n,f,t,s,O,S,a,w;
     int N,L;
+	char indir[100];
 };
 
 extern timeval start,finish;

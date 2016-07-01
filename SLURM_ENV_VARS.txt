@@ -1,0 +1,7 @@
+SLURM_JOBID	Job ID
+SLURM_SUBMIT_DIR	Job submission directory
+SLURM_SUBMIT_HOST	Name of host from which job was submitted
+SLURM_JOB_NODELIST	Names of nodes allocated to job
+SLURM_ARRAY_TASK_ID	Task id within job array
+SLURM_JOB_CPUS_PER_NODE	CPU cores per node allocated to job
+SLURM_NNODES		Number of nodes allocated to job
