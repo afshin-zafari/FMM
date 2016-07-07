@@ -31,7 +31,7 @@ int L = 3;
 void init(Matrix &pts){
     int M = N;
     double theta = 0.0, theta_mod =0.0;
-    cout << "Points" << endl;
+    //cout << "Points" << endl;
     for ( int i=1; i<=M;i++){
             pts(i,1) = 2* cos(theta)*(1.0 + .1*cos(theta_mod));
             pts(i,2) = 1* sin(theta)*(1.0 + .1*cos(theta_mod));
@@ -173,7 +173,7 @@ public:
             if ( p2 == string::npos)
                 return;
             v =  s.substr(p1,p2-p1) ;
-            cout << v << " , " ;
+            /*cout << v << " , " ;*/
             switch(type)
             {
                 case group_type:
@@ -218,7 +218,6 @@ public:
         Tree &T=*t;
         Matrix *M=parse_mat(r,c);
         T.Levels(level).group(g).V.setMatrix(*M);
-        M->print();
     }
     double get_double(string &s){
         string::size_type p1=0,p2;
@@ -287,10 +286,10 @@ public:
                 break;
 
             }
-            cout << "Level: " << level <<" Group: " << group << endl;
+     //       cout << "Level: " << level <<" Group: " << group << endl;
         }
-        cout << "-----------------------\n";
-        t->print_lists();
+       // cout << "-----------------------\n";
+        //t->print_lists();
     }
     void read_op(){
         string s,g;
@@ -375,6 +374,7 @@ void parse_args(int argc , char *argv[]){
     config.w = !config.a;
     config.s = !config.t;
 	strcpy(config.indir,argv[4]);
+	config.cores = atoi (argv[5]);
 }
 void initialize(){
 }
@@ -407,7 +407,9 @@ void fmm_solver(){
             config.S?'S':'O',
             config.w?'w':'a'
             );
+    cout << " Finished. Time (s): " << toc() << " , #Tasks : " << stats.t << endl;
     Q.get_matrix()->export_data(res);
+
 }
 int main(int argc , char *argv[])
 {
@@ -418,13 +420,14 @@ int main(int argc , char *argv[])
     N=atoi(argv[1]);
     L=atoi(argv[2]);
     parse_args(argc,argv);
+	stats.t = 0;
 
-	sgEngine = new SuperGlue<Options>(-1);
+	sgEngine = new SuperGlue<Options>(config.cores);
     tic();
     fmm_solver();
 	sgEngine->barrier();
 
-    cout << " Finished. Time(s): " << toc() << endl;
+	cout << " Finished. Time(s): " << toc() << ", #Tasks:" << stats.t << endl;
     char trace[25];
     sprintf(trace,"trace_%c_%c_%c_%c.txt",
             config.n?'n':'f',

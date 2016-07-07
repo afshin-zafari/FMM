@@ -241,7 +241,7 @@ public:
 
 struct Config{
     bool n,f,t,s,O,S,a,w;
-    int N,L;
+    int N,L,cores;
 	char indir[100];
 };
 
@@ -250,6 +250,11 @@ void tic();
 double toc();
 
 
+struct Statistics{
+	int t,l,g;
+
+};
+extern Statistics stats;
 template<typename T>
 int length(elastic_vect<T> v);
 int length(Tree &T);

@@ -3,6 +3,7 @@
 #include "sg/option/instr_trace.hpp"
 
 extern Config config;
+Statistics stats;
 
 Matrix &MatVec_old(Matrix &x ,  Tree & OT){
     Matrix &y= * new Matrix(size(x,1),size(x,2));
@@ -198,6 +199,7 @@ void submit(SGTaskGemv *t){
         t->run();
 		return;
 	}
+	stats.t++;
 	sgEngine->submit(t);
 }
 void gemv_leaves(SGMatrix &V, SGMatrix &x, SGMatrix &S, int group){
@@ -216,8 +218,7 @@ void gemv_translation(SGMatrix &M2M, SGMatrix &v, int i1,SGMatrix &y,int i2){
 void gemv_final(SGMatrix &A, SGMatrix &v, int i, SGMatrix &y){
     SGTaskGemv *t= new SGTaskGemv(A,v,i,y,i);
     t->transA = true;
-    submit(t);
-    y.get_part(i).get_matrix()->print();
+    submit(t);    
 }
 void gemv_downward(SGMatrix &A, SGMatrix &x, SGMatrix &y,int i ){
     y.get_part(i).get_matrix()->print();
@@ -268,7 +269,7 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
                 }
                 #endif // FMM_3D
                 gemv_leaves ( OT(iLev).group(iGroup).V , x , OT.Levels(iLev).AuxSources,iGroup);
-                fprintf(stdout,"Leaves\t\t\t Level(%d).V(%d) \t\t\t C(%d) \t\t Level(%d).S(%d)\n",
+                if(0)fprintf(stdout,"Leaves\t\t\t Level(%d).V(%d) \t\t\t C(%d) \t\t Level(%d).S(%d)\n",
                         iLev,iGroup,iGroup,iLev,iGroup);
             }
             else{
@@ -279,7 +280,7 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
                     Matrix &i3d = round( ( sign(t) + 3 ) / 2 ) ;
 //                    OT.Levels(iLev).AuxSources.column(iGroup) = OT.Levels(iLev).AuxSources.column(iGroup) +
 //                                OT(iLev).M2M(i3d(1),i3d(2)) * OT.Levels(iLev+1).AuxSources.column(jGroup) ;
-                    fprintf(stdout,"Upward\t\t\t Level(%d).M2M(%d,%d) \t\t Level(%d).S(%d) \t\t Level(%d).S(%d)\n",
+                    if(0)fprintf(stdout,"Upward\t\t\t Level(%d).M2M(%d,%d) \t\t Level(%d).S(%d) \t\t Level(%d).S(%d)\n",
                             iLev,(int)i3d(1),(int)i3d(2)  ,iLev+1,jGroup    ,iLev,iGroup);
                     gemv_upward(OT(iLev).M2M(i3d(1),i3d(2)),OT.Levels(iLev+1).AuxSources,jGroup,OT.Levels(iLev).AuxSources,iGroup);
                 }
@@ -305,7 +306,7 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
                 int ix = t(1) ; int jy = t(2) ;
 //                OT.Levels(iLev).AuxObs.column(jGroup) = OT.Levels(iLev).AuxObs.column(jGroup) +
 //                    OT.Levels(iLev).T(4+ix,4+jy) * OT.Levels(iLev).AuxSources.column(iGroup) ;
-                fprintf(stdout,"Translation \t\t Level(%d).T(%d,%d) \t\t Level(%d).S(%d) \t\t Level(%d).O(%d)\n",
+                if(0)fprintf(stdout,"Translation \t\t Level(%d).T(%d,%d) \t\t Level(%d).S(%d) \t\t Level(%d).O(%d)\n",
                         iLev,4+ix,4+jy  ,iLev,iGroup    ,iLev,jGroup);
                 gemv_translation(OT.Levels(iLev).T(4+ix,4+jy) , OT.Levels(iLev).AuxSources,iGroup, OT.Levels(iLev).AuxObs,jGroup);
 
@@ -336,7 +337,7 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
 //                sg_y = y.pick_rows(LeavesList);
 //                sg_y = sg_y + OT(iLev).group(iGroup).V.transpose() * OT.Levels(iLev).AuxObs.column(iGroup) ;
                 gemv_final(OT(iLev).group(iGroup).V,OT.Levels(iLev).AuxObs,iGroup,y);
-                fprintf(stdout,"Final\t\t\t\t Level(%d).V^T(%d) \t\t Level(%d).O(%d) \t\t Q(%d)\n",
+                if(0)fprintf(stdout,"Final\t\t\t\t Level(%d).V^T(%d) \t\t Level(%d).O(%d) \t\t Q(%d)\n",
                         iLev,iGroup  ,iLev,iGroup    ,iGroup);
 
             }
@@ -348,7 +349,7 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
 //                    OT.Levels(iLev+1).AuxObs.column(jGroup) = OT.Levels(iLev+1).AuxObs.column(jGroup) +
 //                        OT(iLev).M2M(i3d(1),i3d(2)).transpose() * OT.Levels(iLev).AuxObs.column(iGroup) ;
                     gemv_down_obs(OT(iLev).M2M(i3d(1),i3d(2)) , OT.Levels(iLev).AuxObs,iGroup,OT.Levels(iLev+1).AuxObs,jGroup);
-                    fprintf(stdout,"DownObs\t\t\t Level(%d).M2M^T(%d,%d) \t\t Level(%d).O(%d) \t\t Level(%d).O(%d)\n",
+                    if(0)fprintf(stdout,"DownObs\t\t\t Level(%d).M2M^T(%d,%d) \t\t Level(%d).O(%d) \t\t Level(%d).O(%d)\n",
                             iLev,(int)i3d(1),(int)i3d(2), iLev,iGroup  ,iLev+1,jGroup);
                 }
             }
@@ -399,13 +400,10 @@ void mv_near_field(Tree &OT,SGMatrix &C, SGMatrix &Q){
 //        if ( worked[nf->i] and worked[nf->j] )
 //            continue;
         worked[nf->i] = worked[nf->j]=true;
-        fprintf(stdout,"Nfld(%d,%d) \n",nf->i,nf->j);
+//        fprintf(stdout,"Nfld(%d,%d) \n",nf->i,nf->j);
         gemv (*nf->sgMat,C.get_part(nf->j),Q.get_part(nf->i));
-        if ( nf->i == 1){
-            Q.get_part(nf->i).get_matrix()->print("1-* :");
-        }
 //        fprintf(stdout,"Nfld(%d,%d)^T \n",nf->i,nf->j);
 //        gemvt(*nf->sgMat,C.get_part(nf->i),Q.get_part(nf->j));
     }
-    fprintf(stdout,"Near Field Tasks submitted\n");
+    //fprintf(stdout,"Near Field Tasks submitted\n");
 }
