@@ -391,6 +391,8 @@ void initialize(){
 void nbody_solver(){
 }
 SGMatrix *Y;
+Time::TimeUnit exTime;
+EventLog *eFMM;
 void fmm_solver(){
     Tree &OT=*new Tree;
     char f1[100],f2[100];
@@ -403,15 +405,29 @@ void fmm_solver(){
     rdr.read_op();
     OT.Q = 10;
     init(pts);
+
     compute_near_field(OT,pts);
-    Matrix &c = * new Matrix (N,1,1.0);
+    
+	Matrix &c = * new Matrix (N,1,1.0);
     Matrix &q = * new Matrix (N,1,0.0);
 
     SGMatrix &C = *new SGMatrix(c);
     SGMatrix &Q = *new SGMatrix(q);
 	Y=&Q;
+	tic();
+	EventLog *eFMM = new EventLog("FMM");
+	EventLog *eN = new EventLog("NearField");
+	Time::TimeUnit exTime= Time::getTime();
+
     mv_near_field(OT,C,Q);
-    MatVec(OT,C,Q);
+
+	delete eN;
+    EventLog *eMv= new EventLog("Mv");
+
+	MatVec(OT,C,Q);
+
+	delete eMv;
+
 	if (config.l)
 		submit_all();
     
@@ -429,15 +445,15 @@ int main(int argc , char *argv[])
 	stats.t = 0;
 
 	sgEngine = new SuperGlue<Options>(config.cores);
-	Time::TimeUnit exTime= Time::getTime();
-    tic();
-    fmm_solver();
+    
+    
+	fmm_solver();
 	sgEngine->barrier();
+	delete eFMM;
 
 	
-    cout << " Finished. Time (s): " << toc() << " , #Tasks : " << stats.t << endl;
-	exTime = (Time::getTime() - exTime)/3e9;
-	cout << " Finished. Time(s): " << toc() << ", " << exTime << ", #Tasks:" << stats.t << endl;
+	double execTime = ((Time::getTime() - exTime)*1.0)/3000000000.0;
+	cout << " Finished. Time(s): " << toc() << ", " << execTime << ", #Tasks:" << stats.t << endl;
 
 	char res[25];
     sprintf(res,"results_%c_%c_%c_%c.txt",

@@ -10,6 +10,8 @@
 #include <sys/time.h>
 #include "matrix.hpp"
 #include "sgmatrix.hpp"
+#include "sg/superglue.hpp"
+#include "sg/option/instr_trace.hpp"
 
 #define M_PI		3.14159265358979323846
 
@@ -344,4 +346,24 @@ void compute_radiation( Tree &OT, Matrix &pts, char method, KernelFcn kernel);
 void compute_near_field(Tree &OT,Matrix &pts);
 void mv_near_field(Tree &OT,SGMatrix &C, SGMatrix &Q);
 void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y);
+
+class EventLog{
+public:
+	Time::TimeUnit start;
+	string s;
+	EventLog(const char * s_):s(s_){
+		start=Time::getTime();
+	}
+	void End(){
+		Time::TimeUnit end = Time::getTime();
+		double dur = end - start;
+		fprintf(stdout,"%s: %lf (s).\n",s.c_str(), dur /3e9);
+		start = 0;
+	}
+
+	~EventLog(){
+		if ( start)
+			End();
+	}
+};
 #endif // FMM_HPP_INCLUDED

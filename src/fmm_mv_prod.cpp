@@ -1,6 +1,4 @@
 #include "fmm.hpp"
-#include "sg/superglue.hpp"
-#include "sg/option/instr_trace.hpp"
 
 extern Config config;
 Statistics stats;
@@ -248,6 +246,9 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
     int nLev = length(OT);
     int Q = OT.Q ;
 
+	EventLog ev("Init.");
+	
+
     // INIT
     for (int iLev = 3;iLev<= nLev;iLev++){
         int nGroups = length(OT(iLev).group) ;
@@ -264,12 +265,13 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
             om += Q;
         }
     }
-
+	ev.End();
     // Radiation
     // Equivalent sources distributions are evaluated for each group at each
     // level (if method is 'h', we always map actual (original) sources to equivalent
     // sources of each level; if method is 'h2' we recursively map equivalent sources of
     // level iLev to equivalent sources at level iLev-1 (parent level) )
+	EventLog *eR = new EventLog("Radiatoion.");
     for ( int iLev = nLev; iLev >=3;iLev--){
         Level &ThisLev = OT(iLev) ;
         int nGroups = length(ThisLev.group) ;
@@ -300,12 +302,13 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
             }
         }
     }
-
+	delete eR;
     // Translation
     // Translators transform the equivalent source density on source group to an
     // equivalent field density on the observation group: this operation is
     // performed, at each level, for all group pairs which are in far field
     // interaction list of each other
+	EventLog *eT = new EventLog("Translation");
     for (int iLev = 3;iLev<= nLev;iLev++){
         Level &ThisLev = OT.Levels(iLev) ;
         int nGroups = length(ThisLev.group) ;
@@ -326,9 +329,10 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
             }
         }
     }
-
+	delete eT;
     // Receiving
     // The receiving step is reciprocal to the radiation step
+	EventLog *eC = new EventLog ("Receiving");
     for (int iLev = 3;iLev <= nLev; iLev++){
         Level &ThisLev = OT(iLev) ;
         int nGroups = length(ThisLev.group) ;
@@ -369,7 +373,7 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
         }
     }
 
-
+	delete eC;
 }
 
 /*====================================================================*/
