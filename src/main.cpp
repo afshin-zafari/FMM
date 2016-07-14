@@ -344,6 +344,7 @@ Config config;
 void parse_args(int argc , char *argv[]){
     std::string::size_type pos;
     string s;
+	config.l = config.m = config.x = false;
     s = argv[3];
     pos = s.find("n");
     if ( pos != std::string::npos )
@@ -369,6 +370,15 @@ void parse_args(int argc , char *argv[]){
     pos = s.find("w");
     if ( pos != std::string::npos )
         config.w = true;
+    pos = s.find("l");
+    if ( pos != std::string::npos )
+        config.l = true;
+    pos = s.find("m");
+    if ( pos != std::string::npos )
+        config.m = true;
+    pos = s.find("x");
+    if ( pos != std::string::npos )
+        config.x = true;
     config.n = !config.f;
     config.O = !config.S;
     config.w = !config.a;
@@ -380,6 +390,7 @@ void initialize(){
 }
 void nbody_solver(){
 }
+SGMatrix *Y;
 void fmm_solver(){
     Tree &OT=*new Tree;
     char f1[100],f2[100];
@@ -398,19 +409,14 @@ void fmm_solver(){
 
     SGMatrix &C = *new SGMatrix(c);
     SGMatrix &Q = *new SGMatrix(q);
+	Y=&Q;
     mv_near_field(OT,C,Q);
     MatVec(OT,C,Q);
-    char res[25];
-    sprintf(res,"results_%c_%c_%c_%c.txt",
-            config.n?'n':'f',
-            config.s?'s':'t',
-            config.S?'S':'O',
-            config.w?'w':'a'
-            );
-    cout << " Finished. Time (s): " << toc() << " , #Tasks : " << stats.t << endl;
-    Q.get_matrix()->export_data(res);
-
+	if (config.l)
+		submit_all();
+    
 }
+
 int main(int argc , char *argv[])
 {
     if ( argc <4){
@@ -423,12 +429,27 @@ int main(int argc , char *argv[])
 	stats.t = 0;
 
 	sgEngine = new SuperGlue<Options>(config.cores);
+	Time::TimeUnit exTime= Time::getTime();
     tic();
     fmm_solver();
 	sgEngine->barrier();
 
-	cout << " Finished. Time(s): " << toc() << ", #Tasks:" << stats.t << endl;
-    char trace[25];
+	
+    cout << " Finished. Time (s): " << toc() << " , #Tasks : " << stats.t << endl;
+	exTime = (Time::getTime() - exTime)/3e9;
+	cout << " Finished. Time(s): " << toc() << ", " << exTime << ", #Tasks:" << stats.t << endl;
+
+	char res[25];
+    sprintf(res,"results_%c_%c_%c_%c.txt",
+            config.n?'n':'f',
+            config.s?'s':'t',
+            config.S?'S':'O',
+            config.w?'w':'a'
+            );
+	
+	Y->get_matrix()->export_data(res);
+    
+	char trace[25];
     sprintf(trace,"trace_%c_%c_%c_%c.txt",
             config.n?'n':'f',
             config.s?'s':'t',

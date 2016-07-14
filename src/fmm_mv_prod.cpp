@@ -129,7 +129,7 @@ void cblas_dgemv(const int layout,
         }
      }
  }
-
+/*
 class SGTaskGemv : public Task<Options, 3> {
 private:
     SGMatrix *A,*v,*y;
@@ -194,13 +194,26 @@ public:
 
     }
 };
+*/
+vector<SGTaskGemv *> tlist;
 void submit(SGTaskGemv *t){
     if (config.s and !config.t){
         t->run();
 		return;
 	}
 	stats.t++;
-	sgEngine->submit(t);
+	if (config.l){
+		tlist.push_back(t);
+	}
+	else {
+		sgEngine->submit(t);
+	}
+}
+void submit_all(){
+	for ( auto t: tlist){
+		sgEngine->submit(t);
+	}
+	fprintf(stdout,"submit all called.\n");
 }
 void gemv_leaves(SGMatrix &V, SGMatrix &x, SGMatrix &S, int group){
     SGTaskGemv *t= new SGTaskGemv(V,x,group,S,group);

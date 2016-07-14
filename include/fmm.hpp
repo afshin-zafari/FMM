@@ -238,12 +238,86 @@ class MvTask{
 public:
     MvTask(SGMatrix &M,SGMatrix &S,int column,SGVector &y){}
 };
-
 struct Config{
-    bool n,f,t,s,O,S,a,w;
+    bool n,f,t,s,O,S,a,w,l,m,x;
     int N,L,cores;
 	char indir[100];
 };
+extern Config config;
+
+void cblas_dgemv(const int layout,
+                 const bool TransA,
+                 const int M, const int N,
+                 const double alpha, const double *A, const int lda,
+                 const double *X, const int incX,
+                 const double beta, double *Y, const int incY);
+
+class SGTaskGemv : public Task<Options, 3> {
+private:
+    SGMatrix *A,*v,*y;
+public:
+    bool transA;
+    enum{
+		Read=ReadWriteAdd::read,
+		Write=ReadWriteAdd::write,
+		Add=ReadWriteAdd::add};
+    enum{COL_MAJOR,ROW_MAJOR};
+	std::string get_name() { return "A"; }
+    SGTaskGemv(SGMatrix &A_, SGMatrix &v_, int i1,SGMatrix &Y_, int i2){
+        A = &A_;
+        v = &v_.get_part(i1);
+        y = &Y_.get_part(i2);
+        register_args();
+    }
+    SGTaskGemv(SGMatrix &A_, SGMatrix &v_, SGMatrix &Y_){
+        A = &A_;
+        v = &v_;
+        y = &Y_;
+        register_args();
+    }
+    void register_args(){
+        SGHandle &hA = A->get_handle();
+        SGHandle &hv = v->get_handle();
+        SGHandle &hy = y->get_handle();
+        register_access(ReadWriteAdd::read, hA);
+        register_access(ReadWriteAdd::read, hv);
+        if ( config.w )
+            register_access(ReadWriteAdd::write, hy);
+        else
+            register_access(ReadWriteAdd::add, hy);
+        transA = false;
+
+    }
+    //void register_access(int axs, SGHandle &h){}
+    void run(){
+        const int M = A->get_matrix()->rows();
+        const int N = A->get_matrix()->cols();
+        const int lda = M;
+        const double *Mat = A->get_matrix()->get_data_memory();
+        const double *X   = v->get_matrix()->get_data_memory();
+        double *Y   = y->get_matrix()->get_data_memory();
+        assert(Mat);
+        assert(X);
+        assert(Y);
+        int mx= v->get_matrix()->rows();
+        int nx= v->get_matrix()->cols();
+        int my= y->get_matrix()->rows();
+        int ny= y->get_matrix()->cols();
+        //fprintf(stdout,"A %dx%d X %dx%d Y%dx%d\n",M,N,mx,nx,my,ny);
+        assert(nx*ny==1);
+        if ( !transA){
+            assert(M==my );
+            assert(N==mx );
+        }else{
+            assert(N==my );
+            assert(M==mx );
+        }
+        cblas_dgemv(COL_MAJOR,transA,M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
+
+    }
+};
+void submit_all(void);
+
 
 extern timeval start,finish;
 void tic();
