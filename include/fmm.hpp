@@ -242,8 +242,8 @@ public:
 };
 struct Config{
     bool n,f,t,s,O,S,a,w,l,m,x;
-    int N,L,cores;
-	char indir[100];
+    int N,L,cores,Q,P;
+	char tree[100],ops[100];
 };
 extern Config config;
 
@@ -258,6 +258,8 @@ class SGTaskGemv : public Task<Options, 3> {
 private:
     SGMatrix *A,*v,*y;
 public:
+	Time::TimeUnit  s,r,f,d;
+	int type;
     bool transA;
     enum{
 		Read=ReadWriteAdd::read,
@@ -292,6 +294,7 @@ public:
     }
     //void register_access(int axs, SGHandle &h){}
     void run(){
+		r = Time::getTime();
         const int M = A->get_matrix()->rows();
         const int N = A->get_matrix()->cols();
         const int lda = M;
@@ -315,8 +318,12 @@ public:
             assert(M==mx );
         }
         cblas_dgemv(COL_MAJOR,transA,M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
-
+		f = Time::getTime();
     }
+	~SGTaskGemv(){
+		d = Time::getTime();
+		fprintf(stdout,"%ld, %ld, %ld, %ld, %d\n",s,r,f,d,type);
+	}
 };
 void submit_all(void);
 
@@ -328,7 +335,7 @@ double toc();
 
 struct Statistics{
 	int t,l,g;
-
+	double dur[6];
 };
 extern Statistics stats;
 template<typename T>
@@ -366,4 +373,5 @@ public:
 			End();
 	}
 };
+extern double submit_time;
 #endif // FMM_HPP_INCLUDED

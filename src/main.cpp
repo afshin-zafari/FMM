@@ -343,9 +343,17 @@ public:
 Config config;
 void parse_args(int argc , char *argv[]){
     std::string::size_type pos;
-    string s;
+    config.N = N = atoi(argv[1]);
+    config.L = L = atoi(argv[2]);
+	config.Q     = atoi(argv[3]);
+	config.P     = atoi(argv[4]);
+	config.cores = atoi (argv[5]);
+	strcpy(config.tree,argv[6]);
+	strcpy(config.ops ,argv[7]);
+
+	string s;
 	config.l = config.m = config.x = false;
-    s = argv[3];
+    s = argv[8];
     pos = s.find("n");
     if ( pos != std::string::npos )
         config.n = true;
@@ -383,8 +391,7 @@ void parse_args(int argc , char *argv[]){
     config.O = !config.S;
     config.w = !config.a;
     config.s = !config.t;
-	strcpy(config.indir,argv[4]);
-	config.cores = atoi (argv[5]);
+
 }
 void initialize(){
 }
@@ -395,15 +402,12 @@ Time::TimeUnit exTime;
 EventLog *eFMM;
 void fmm_solver(){
     Tree &OT=*new Tree;
-    char f1[100],f2[100];
 	
-    sprintf(f1,"%s/tree_%d_%d.txt",config.indir,N,L);
-    sprintf(f2,"%s/tree_op_%d_%d.txt",config.indir,N,L);
     Matrix &pts = *new Matrix (N,3);
-    Reader rdr(f1,f2,OT);
+    Reader rdr(config.tree,config.ops,OT);
     rdr.read();
     rdr.read_op();
-    OT.Q = 10;
+    OT.Q = config.Q;
     init(pts);
 
     compute_near_field(OT,pts);
@@ -415,9 +419,9 @@ void fmm_solver(){
     SGMatrix &Q = *new SGMatrix(q);
 	Y=&Q;
 	tic();
-	EventLog *eFMM = new EventLog("FMM");
+	eFMM = new EventLog("FMM");
 	EventLog *eN = new EventLog("NearField");
-	Time::TimeUnit exTime= Time::getTime();
+	exTime= Time::getTime();
 
     mv_near_field(OT,C,Q);
 
@@ -432,18 +436,19 @@ void fmm_solver(){
 		submit_all();
     
 }
-
+MemoryPool *pool;
+double submit_time;
 int main(int argc , char *argv[])
 {
-    if ( argc <4){
-        fprintf(stderr,"Usage %s N L nfstSOwa input_dir\n",argv[0]);
+    if ( argc <9){
+        fprintf(stderr,"Usage %s N L Q S T trre_file ops_file nfstSOwa \n",argv[0]);
         exit(-1);
     }
-    N=atoi(argv[1]);
-    L=atoi(argv[2]);
     parse_args(argc,argv);
 	stats.t = 0;
 
+	submit_time = 0;
+	pool = new MemoryPool(1e9);
 	sgEngine = new SuperGlue<Options>(config.cores);
     
     
@@ -451,9 +456,11 @@ int main(int argc , char *argv[])
 	sgEngine->barrier();
 	delete eFMM;
 
+
 	
 	double execTime = ((Time::getTime() - exTime)*1.0)/3000000000.0;
-	cout << " Finished. Time(s): " << toc() << ", " << execTime << ", #Tasks:" << stats.t << endl;
+	cout << " Finished. Time(s): " << toc() << ", " << execTime << ", SubmitTime: " << submit_time/3e9 << ", #Tasks:" << stats.t << endl;
+	cout << "translation loop: " << stats.dur[1]/3e9 << ", gemv_trans: " << stats.dur[0]/3e9 << endl;
 
 	char res[25];
     sprintf(res,"results_%c_%c_%c_%c.txt",
@@ -473,6 +480,7 @@ int main(int argc , char *argv[])
             config.w?'w':'a'
             );
 	Trace<Options>::dump(trace);
+	delete pool;
 }
 
 

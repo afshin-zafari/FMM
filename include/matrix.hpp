@@ -11,10 +11,38 @@
 #define COL_RANGE(j)   ((j>=0)&& (j<N))
 #include <vector>
 typedef double ElementType;
+typedef unsigned char byte;
 template <typename T> int sgn(T val)
 {
     return (T(0) < val) - (val < T(0));
 }
+class MemoryPool{
+private:
+	long size;
+	long free_offset;
+	byte *memory;
+public:
+	MemoryPool(long z):size(z){
+		free_offset = 0;
+		allocate(size);
+	}
+	void allocate(long z){
+		memory = new byte[z];
+		if (!memory){
+			fprintf(stderr,"failed to allocate %ld bytes (%ld GB).\n",z,z/1e9);
+			exit(-1);
+		}	
+	}
+	void *get_memory(long z){
+		void *m = (void *)(memory+ free_offset) ;
+		free_offset += z;
+		return m;
+	}
+	~MemoryPool(){
+		delete [] memory;
+	}
+};
+extern MemoryPool *pool;
 class Matrix
 {
 private:
@@ -53,7 +81,8 @@ public:
         M = m;
         N = n;
         assert(N>0 && M>0);
-        data = new ElementType[M*N];
+		void *mem = pool->get_memory(M*N*sizeof(ElementType));
+        data = new(mem) ElementType[M*N];
         zero_indexing=false;
         for(int i=0;i<M;i++)
             for(int j=0;j<N;j++)
@@ -68,6 +97,7 @@ public:
             M=0;
 
         assert(N>0 && M>0);
+		void *mem=pool->get_memory(M*N*sizeof(ElementType));
         data = new ElementType[M*N];
         zero_indexing=false;
         for(int i=0;i<M;i++)
@@ -428,6 +458,7 @@ public:
     }
     void rebuild(int m, int n){
         assert(m*n !=0);
+		assert(false);
         if (data)
             delete [] data;
         M=m;
