@@ -65,8 +65,6 @@ def load_file(filename):
           break
         if line.startswith('LOG 2'):
             continue
-        if line.startswith('#'):
-            continue
         # [thread id]: [start] [length] [name [perf]]
         g = pattern.match(line)
         if g != None:
@@ -116,7 +114,7 @@ def load_file(filename):
           continue
 
         # parse error
-        print("Error parsing line: ", line)
+        print "Error parsing line: ", line
     fh.close()
     return out
 
@@ -124,10 +122,10 @@ def getMedian(numericValues):
   theValues = sorted(numericValues)
 
   if len(theValues) % 2 == 1:
-    return theValues[(len(theValues)+1)//2-1]
+    return theValues[(len(theValues)+1)/2-1]
   else:
-    lower = theValues[len(theValues)//2-1]
-    upper = theValues[len(theValues)//2]
+    lower = theValues[len(theValues)/2-1]
+    upper = theValues[len(theValues)/2]
 
     return (float(lower + upper)) / 2
 
@@ -135,13 +133,13 @@ def getMedian(numericValues):
 ##################################################
 # plot
 
-import matplotlib.pyplot as plt
+import pylab
 
 def drawBox(x0,x1,y0,y1,col):
-    plt.fill([x0, x1, x0], [y0, (y0+y1)/2, y1], fc=col[0], ec=col[1], linewidth=.5)
+    pylab.fill([x0, x1, x0], [y0, (y0+y1)/2, y1], fc=col[0], ec=col[1], linewidth=.5)
 
 def drawText(x,y,text):
-    plt.text(x,y,text,horizontalalignment='center',verticalalignment='center',fontsize=taskfontsize)
+    pylab.text(x,y,text,horizontalalignment='center',verticalalignment='center',fontsize=taskfontsize)
 
 def drawTask(x0,x1,y0,y1,orgtext):
     drawBox(x0,x1,y0,y1,getColor(orgtext))
@@ -171,11 +169,11 @@ def drawPlot(tasks):
         drawTask(x0, x1, y0, y1, task['name'])
 
     padding = barHeight/2
-    plt.ylim([ -barHeight/2 - padding, (numThreads-1)*height + barHeight/2 + padding]);
+    pylab.ylim([ -barHeight/2 - padding, (numThreads-1)*height + barHeight/2 + padding]);
     yticks=range(0, numThreads)
-    plt.yticks(yticks, yticks);
-    plt.xlabel(r'Time')#,fontsize=labelfontsize)
-    plt.ylabel(r'Thread')#,fontsize=labelfontsize)
+    pylab.yticks(yticks, yticks);
+    pylab.xlabel(r'Time')#,fontsize=labelfontsize)
+    pylab.ylabel(r'Thread')#,fontsize=labelfontsize)
 
 
 ##################################################
@@ -193,7 +191,7 @@ tasks = load_file(filename)
 
 # filter out uninteresting tasks
 
-tasks = [x for x in tasks if myfilter(x)]
+tasks = filter(myfilter, tasks)
 
 
 # normalize start time
@@ -243,14 +241,14 @@ for p in procids:
 
 totaltime = sum([x['length'] for x in tasks])
 endtime = max([x['end'] for x in tasks])
-print('N= ', len(tasks), \
+print 'N= ', len(tasks), \
       ' Total= ', totaltime, \
       ' End= ', endtime, \
       ' Par= ', "{0:.2f}".format(totaltime/float(endtime)), \
       ' DistMin= ', min(mtd), \
       ' DistMed= ', getMedian(mtd), \
-      ' perf= ', sum([x['cache'] for x in tasks]))
+      ' perf= ', sum([x['cache'] for x in tasks])
 
 drawPlot(tasks)
-plt.savefig(filename+'.pdf')
-#plt.show()
+pylab.savefig(filename+'.pdf')
+#pylab.show()

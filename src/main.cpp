@@ -4,6 +4,8 @@
 #include <fstream>
 #include <sstream>
 
+#include <dirent.h>
+
 #include "fmm.hpp"
 #include "sg/superglue.hpp"
 #include "sg/option/instr_trace.hpp"
@@ -400,44 +402,74 @@ void nbody_solver(){
 SGMatrix *Y;
 Time::TimeUnit exTime;
 EventLog *eFMM;
+Matrix   *pts_ptr;
+Tree     *OT_ptr;
+Matrix   *c_p,*q_p;
+SGMatrix *C_p,*Q_p;
+
 void fmm_solver(){
-    Tree &OT=*new Tree;
+	OT_ptr =new Tree;
+    Tree &OT=*OT_ptr;
 	
-    Matrix &pts = *new Matrix (N,3);
+    
+	pts_ptr= new Matrix (N,3);
+	Matrix &pts=*pts_ptr;
     Reader rdr(config.tree,config.ops,OT);
     rdr.read();
     rdr.read_op();
     OT.Q = config.Q;
     init(pts);
 
+	EventLog *eN = new EventLog("ComputeNearFieldOps");
     compute_near_field(OT,pts);
+	delete eN;
     
-	Matrix &c = * new Matrix (N,1,1.0);
-    Matrix &q = * new Matrix (N,1,0.0);
+	
+	c_p = new Matrix (N,1,1.0);
+	Matrix &c = * c_p;
+    
+	q_p = new Matrix (N,1,0.0);
+	Matrix &q = * q_p;
 
-    SGMatrix &C = *new SGMatrix(c);
-    SGMatrix &Q = *new SGMatrix(q);
+    
+	C_p =new SGMatrix(c);
+	SGMatrix &C = *C_p;
+    
+	Q_p=new SGMatrix(q);
+	SGMatrix &Q = *Q_p;
 	Y=&Q;
 	tic();
 	eFMM = new EventLog("FMM");
-	EventLog *eN = new EventLog("NearField");
 	exTime= Time::getTime();
+    EventLog *eMvn= new EventLog("Mv_near");
 
     mv_near_field(OT,C,Q);
+	
+	delete eMvn;
 
-	delete eN;
-    EventLog *eMv= new EventLog("Mv");
+    EventLog *eMv= new EventLog("Mv_far");
 
 	MatVec(OT,C,Q);
 
 	delete eMv;
+	cout << Time::getTime() << endl;
+	EventLog *b = new EventLog("Barrier.");
+	Time::TimeUnit bs=Time::getTime();
+	if (config.t)
+		sgEngine->barrier();
+	bs=Time::getTime()-bs;
+	delete b;
+	delete eFMM;
+	double execTime = ((Time::getTime() - exTime)*1.0)/3000000000.0;
+	cout << " Finished. Time(s): " << toc() << ", " << execTime << ", Barrier: " << bs/3e9 << ", #Tasks:" << stats.t << endl;
+	cout << Time::getTime() << endl;
 
-	if (config.l)
-		submit_all();
+	//if (config.l)		submit_all();
     
 }
 MemoryPool *pool;
 double submit_time;
+void show_affinity() ;
 int main(int argc , char *argv[])
 {
     if ( argc <9){
@@ -449,18 +481,24 @@ int main(int argc , char *argv[])
 
 	submit_time = 0;
 	pool = new MemoryPool(1e9);
-	sgEngine = new SuperGlue<Options>(config.cores);
-    
+	if(config.t)
+		sgEngine = new SuperGlue<Options>(config.cores);
+    show_affinity();
     
 	fmm_solver();
-	sgEngine->barrier();
-	delete eFMM;
-
-
+	cout << Time::getTime() << endl;
+	//EventLog *b = new EventLog("Barrier.");
+	//Time::TimeUnit bs=Time::getTime();
+	//sgEngine->barrier();
+	//bs=Time::getTime()-bs;
+	//delete b;
+	//delete eFMM;
 	
-	double execTime = ((Time::getTime() - exTime)*1.0)/3000000000.0;
-	cout << " Finished. Time(s): " << toc() << ", " << execTime << ", SubmitTime: " << submit_time/3e9 << ", #Tasks:" << stats.t << endl;
-	cout << "translation loop: " << stats.dur[1]/3e9 << ", gemv_trans: " << stats.dur[0]/3e9 << endl;
+	cout << "#Data Handles: " << XType::LastHandle << endl;
+	cout << "Total submit time: " << submit_time/3e9 << endl;
+
+    //SaveDAG_task<Options>::dump("fmm.dot");
+    //SaveDAG_data<Options>::dump("fmm_data.dot");
 
 	char res[25];
     sprintf(res,"results_%c_%c_%c_%c.txt",
@@ -484,3 +522,27 @@ int main(int argc , char *argv[])
 }
 
 
+void show_affinity() {
+    DIR *dp;
+    assert((dp = opendir("/proc/self/task")) != NULL);
+    
+    struct dirent *dirp;
+    
+    while ((dirp = readdir(dp)) != NULL) {
+      if (dirp->d_name[0] == '.')
+            continue;
+      
+      cpu_set_t affinityMask;
+        sched_getaffinity(atoi(dirp->d_name), sizeof(cpu_set_t), &affinityMask);
+        std::stringstream ss;
+        for (size_t i = 0; i < sizeof(cpu_set_t); ++i) {
+	  if (CPU_ISSET(i, &affinityMask))
+	    ss << 1;
+	  else
+	    ss << 0;
+        }
+        fprintf(stderr, "tid %d affinity %s\n", atoi(dirp->d_name), ss.str().c_str());
+    }
+    closedir(dp);
+  }
+  

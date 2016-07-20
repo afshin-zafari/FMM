@@ -12,6 +12,16 @@
 #include <vector>
 typedef double ElementType;
 typedef unsigned char byte;
+
+
+struct Config{
+    bool n,f,t,s,O,S,a,w,l,m,x;
+    int N,L,cores,Q,P;
+	char tree[100],ops[100];
+};
+extern Config config;
+
+
 template <typename T> int sgn(T val)
 {
     return (T(0) < val) - (val < T(0));
@@ -81,8 +91,13 @@ public:
         M = m;
         N = n;
         assert(N>0 && M>0);
-		void *mem = pool->get_memory(M*N*sizeof(ElementType));
-        data = new(mem) ElementType[M*N];
+		if (config.m){
+			void *mem = pool->get_memory(M*N*sizeof(ElementType));
+			data = new(mem) ElementType[M*N];
+		}
+		else{
+			data = new ElementType[M*N];
+		}
         zero_indexing=false;
         for(int i=0;i<M;i++)
             for(int j=0;j<N;j++)
@@ -97,8 +112,13 @@ public:
             M=0;
 
         assert(N>0 && M>0);
-		void *mem=pool->get_memory(M*N*sizeof(ElementType));
-        data = new ElementType[M*N];
+		if (config.m){
+			void *mem = pool->get_memory(M*N*sizeof(ElementType));
+			data = new(mem) ElementType[M*N];
+		}
+		else{
+			data = new ElementType[M*N];
+		}
         zero_indexing=false;
         for(int i=0;i<M;i++)
             for(int j=0;j<N;j++)
@@ -111,6 +131,7 @@ public:
     {
         if ( data)
             delete [] data;
+		fprintf(stdout,"~Matrix\n");
     }
     ElementType& operator () (int i, int j=-1 )
     {

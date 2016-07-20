@@ -171,8 +171,8 @@ public:
     {
         return left;
     }
+	static int LastHandle;
 };
-static int LastHandle=0;
 class YType: public XType
 {
 private:

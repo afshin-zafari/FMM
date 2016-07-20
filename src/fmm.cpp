@@ -87,6 +87,7 @@ void sort(Matrix &in, Matrix &indx){
     }
 }
 timeval start,finish;
+int XType::LastHandle=0;
 
 void tic()
 {

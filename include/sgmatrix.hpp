@@ -4,10 +4,19 @@
 #include "xtype.hpp"
 #include "sg/superglue.hpp"
 #include "sg/option/instr_trace.hpp"
+#include "sg/option/savedag_task.hpp"
+#include "sg/option/savedag_data.hpp"
+
 
 struct Options : public DefaultOptions<Options> {
     typedef Enable TaskName;
     typedef Trace<Options> Instrumentation;
+	/*
+	typedef Enable TaskId;
+    typedef Enable HandleId;
+    typedef Enable HandleName;
+    typedef SaveDAG<Options> LogDAG;
+	*/ 
 };
 
 #define SGHandle Handle<Options> 
@@ -25,7 +34,12 @@ class SGMatrix: public XType
     bool trans;
     int pM,pN;
 public:
-    //using XType::operator=;
+    SGMatrix():XType("X",(void *)this)
+    {
+        sg_handle = new MyHandle(++LastHandle);
+		sgHandle = new SGHandle;
+        trans=false;
+    }
     SGMatrix(const char *p):XType(p,(void *)this)
     {
         sg_handle  = new MyHandle(++LastHandle);
@@ -127,12 +141,6 @@ public:
 	SGHandle &get_handle(){
 		return *sgHandle;
 	}
-    SGMatrix():XType("X",(void *)this)
-    {
-        sg_handle = new MyHandle(++LastHandle);
-		sgHandle = new SGHandle;
-        trans=false;
-    }
     typedef enum Partition {Column,Row} Partition;
     void build(int rows, int cols, Partition p)
     {
@@ -200,6 +208,9 @@ public:
     void set_mat(Matrix *M_){
             M = M_;
     }
+	~SGMatrix(){
+		fprintf(stdout,"~SGMatrix\n");
+	}
 };
 class SGVector : public SGMatrix
 {

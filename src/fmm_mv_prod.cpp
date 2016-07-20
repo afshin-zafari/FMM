@@ -127,72 +127,6 @@ void cblas_dgemv(const int layout,
         }
      }
  }
-/*
-class SGTaskGemv : public Task<Options, 3> {
-private:
-    SGMatrix *A,*v,*y;
-public:
-    bool transA;
-    enum{
-		Read=ReadWriteAdd::read,
-		Write=ReadWriteAdd::write,
-		Add=ReadWriteAdd::add};
-    enum{COL_MAJOR,ROW_MAJOR};
-	std::string get_name() { return "A"; }
-    SGTaskGemv(SGMatrix &A_, SGMatrix &v_, int i1,SGMatrix &Y_, int i2){
-        A = &A_;
-        v = &v_.get_part(i1);
-        y = &Y_.get_part(i2);
-        register_args();
-    }
-    SGTaskGemv(SGMatrix &A_, SGMatrix &v_, SGMatrix &Y_){
-        A = &A_;
-        v = &v_;
-        y = &Y_;
-        register_args();
-    }
-    void register_args(){
-        SGHandle &hA = A->get_handle();
-        SGHandle &hv = v->get_handle();
-        SGHandle &hy = y->get_handle();
-        register_access(ReadWriteAdd::read, hA);
-        register_access(ReadWriteAdd::read, hv);
-        if ( config.w )
-            register_access(ReadWriteAdd::write, hy);
-        else
-            register_access(ReadWriteAdd::add, hy);
-        transA = false;
-
-    }
-    //void register_access(int axs, SGHandle &h){}
-    void run(){
-        const int M = A->get_matrix()->rows();
-        const int N = A->get_matrix()->cols();
-        const int lda = M;
-        const double *Mat = A->get_matrix()->get_data_memory();
-        const double *X   = v->get_matrix()->get_data_memory();
-        double *Y   = y->get_matrix()->get_data_memory();
-        assert(Mat);
-        assert(X);
-        assert(Y);
-        int mx= v->get_matrix()->rows();
-        int nx= v->get_matrix()->cols();
-        int my= y->get_matrix()->rows();
-        int ny= y->get_matrix()->cols();
-        //fprintf(stdout,"A %dx%d X %dx%d Y%dx%d\n",M,N,mx,nx,my,ny);
-        assert(nx*ny==1);
-        if ( !transA){
-            assert(M==my );
-            assert(N==mx );
-        }else{
-            assert(N==my );
-            assert(M==mx );
-        }
-        cblas_dgemv(COL_MAJOR,transA,M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
-
-    }
-};
-*/
 vector<SGTaskGemv *> tlist;
 
 void submit(SGTaskGemv *t){
@@ -221,11 +155,13 @@ void submit_all(){
 void gemv_leaves(SGMatrix &V, SGMatrix &x, SGMatrix &S, int group){
     SGTaskGemv *t= new SGTaskGemv(V,x,group,S,group);
 	t->type=1;
+	t->set_name("Vx->s");
     submit(t);
 }
 void gemv_upward(SGMatrix &M2M, SGMatrix &v, int i1,SGMatrix &y,int i2){
     SGTaskGemv *t= new SGTaskGemv(M2M,v,i1,y,i2);
 	t->type=2;
+	t->set_name("Ms->s");
     submit(t);
 }
 void gemv_translation(SGMatrix &M2M, SGMatrix &v, int i1,SGMatrix &y,int i2){
@@ -234,6 +170,7 @@ void gemv_translation(SGMatrix &M2M, SGMatrix &v, int i1,SGMatrix &y,int i2){
 	tt = Time::getTime() - tt;
 	stats.dur[0] += tt;
 	t->type=3;
+	t->set_name("Ms->o");
     submit(t);
 
 }
@@ -241,18 +178,21 @@ void gemv_final(SGMatrix &A, SGMatrix &v, int i, SGMatrix &y){
     SGTaskGemv *t= new SGTaskGemv(A,v,i,y,i);
     t->transA = true;
 	t->type=4;
+	t->set_name("V^To->y");
     submit(t);    
 }
 void gemv_downward(SGMatrix &A, SGMatrix &x, SGMatrix &y,int i ){
     y.get_part(i).get_matrix()->print();
     SGTaskGemv *t= new SGTaskGemv(A,x,i,y,i);
 	t->type=5;
+	t->set_name("Vx->S");
     submit(t);
 }
 void gemv_down_obs(SGMatrix &A, SGMatrix &v, int i1, SGMatrix &y, int i2){
     SGTaskGemv *t= new SGTaskGemv(A,v,i1,y,i2);
     t->transA = true;
 	t->type=6;
+	t->set_name("M^To->o");
     submit(t);
 }
 void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
@@ -409,6 +349,7 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
 void gemv(SGMatrix &A,SGMatrix &x, SGMatrix &y){
     SGTaskGemv *t = new SGTaskGemv(A,x,y);
 	t->type=7;
+	t->set_name("NFx->y");
     submit(t);
 }
 /*====================================================================*/
@@ -416,6 +357,7 @@ void gemvt(SGMatrix &A,SGMatrix &x, SGMatrix &y){
     SGTaskGemv *t = new SGTaskGemv(A,x,y);
     t->transA = true;
 	t->type=8;
+	t->set_name("NF^Tx->y");
     submit(t);
 }
 /*====================================================================*/

@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <cassert>
 #include <sys/time.h>
+#include "acml.h"
 #include "matrix.hpp"
 #include "sgmatrix.hpp"
 #include "sg/superglue.hpp"
@@ -235,17 +236,14 @@ public:
         cout << endl;
 
     }
+	~Tree(){
+		fprintf(stdout,"~Tree\n");
+	}
 };
 class MvTask{
 public:
     MvTask(SGMatrix &M,SGMatrix &S,int column,SGVector &y){}
 };
-struct Config{
-    bool n,f,t,s,O,S,a,w,l,m,x;
-    int N,L,cores,Q,P;
-	char tree[100],ops[100];
-};
-extern Config config;
 
 void cblas_dgemv(const int layout,
                  const bool TransA,
@@ -257,6 +255,7 @@ void cblas_dgemv(const int layout,
 class SGTaskGemv : public Task<Options, 3> {
 private:
     SGMatrix *A,*v,*y;
+	string name;
 public:
 	Time::TimeUnit  s,r,f,d;
 	int type;
@@ -265,8 +264,7 @@ public:
 		Read=ReadWriteAdd::read,
 		Write=ReadWriteAdd::write,
 		Add=ReadWriteAdd::add};
-    enum{COL_MAJOR,ROW_MAJOR};
-	std::string get_name() { return "A"; }
+    enum{COL_MAJOR,ROW_MAJOR};	
     SGTaskGemv(SGMatrix &A_, SGMatrix &v_, int i1,SGMatrix &Y_, int i2){
         A = &A_;
         v = &v_.get_part(i1);
@@ -298,8 +296,8 @@ public:
         const int M = A->get_matrix()->rows();
         const int N = A->get_matrix()->cols();
         const int lda = M;
-        const double *Mat = A->get_matrix()->get_data_memory();
-        const double *X   = v->get_matrix()->get_data_memory();
+        double *Mat = A->get_matrix()->get_data_memory();
+        double *X   = v->get_matrix()->get_data_memory();
         double *Y   = y->get_matrix()->get_data_memory();
         assert(Mat);
         assert(X);
@@ -317,13 +315,17 @@ public:
             assert(N==my );
             assert(M==mx );
         }
-        cblas_dgemv(COL_MAJOR,transA,M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
+        //cblas_dgemv(COL_MAJOR,transA,M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
+		if ( !config.x)
+			dgemv(transA?'T':'N',M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
 		f = Time::getTime();
     }
 	~SGTaskGemv(){
 		d = Time::getTime();
-		fprintf(stdout,"%ld, %ld, %ld, %ld, %d\n",s,r,f,d,type);
+		//fprintf(stdout,"%ld, %ld, %ld, %ld, %d\n",s,r,f,d,type);
 	}
+	std::string get_name(){return name;}
+	void set_name(const char *s){name=s;}
 };
 void submit_all(void);
 
