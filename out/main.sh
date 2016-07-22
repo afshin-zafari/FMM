@@ -6,8 +6,13 @@ ACML_LIB=${ACML_DIR}/lib/libacml.a
 export LD_LIBRARY_PATH=${ACML_DIR}/lib:${LD_LIBRARY_PATH}
 
 
-expdir=Exp${j}_${flags}_${T}cores
+expdir=Exp${j}_N${N}_P${S}_Q${Q}_${flags}_${T}cores
+ex=$(ls -d Exp*_N${N}_P${S}_Q${Q}_${flags}_${T}cores)
+if [ "z${ex}z" != "zz"   ] ; then 
+    return
+fi
 mkdir $expdir
+curd=$(pwd)
 cd $expdir
 
 
@@ -28,16 +33,24 @@ res=$(ls ./result*)
 compare=../../../out/check_results.py
 task_times=../../../out/task_times.py
 missed=../../../out/missed_time.py
+dbrec=../../../out/dbrec.py
+
+ttimes=task_times.txt
 
 set +x
 module load python 
 set -x
 python $compare $ref $res>>$out
 
-python $task_times $out > task_times.txt
+python $task_times $out > $ttimes
 python $missed $out >> $out
+python $dbrec $N $L $S $Q $T $flags $out $ttimes >dbrec.txt
 
 for f in $(ls *.dot 2>/dev/null)
 do 
 	dot $f -Tpng -o $f.png
 done
+
+
+
+cd $curd

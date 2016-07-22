@@ -15,7 +15,7 @@ typedef unsigned char byte;
 
 
 struct Config{
-    bool n,f,t,s,O,S,a,w,l,m,x;
+    bool n,f,t,s,O,S,a,w,l,m,x,h;
     int N,L,cores,Q,P;
 	char tree[100],ops[100];
 };

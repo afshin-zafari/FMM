@@ -219,6 +219,7 @@ public:
     void parse_v(int g,int r, int c){
         Tree &T=*t;
         Matrix *M=parse_mat(r,c);
+		assert(M);
         T.Levels(level).group(g).V.setMatrix(*M);
     }
     double get_double(string &s){
@@ -241,6 +242,7 @@ public:
             }
         }
 //        M.print();
+		assert(&M);
         return &M;
     }
     void parse_m2m(int i,int j,int r,int c)
@@ -389,15 +391,14 @@ void parse_args(int argc , char *argv[]){
     pos = s.find("x");
     if ( pos != std::string::npos )
         config.x = true;
+    pos = s.find("h");
+    if ( pos != std::string::npos )
+        config.h = true;
     config.n = !config.f;
     config.O = !config.S;
     config.w = !config.a;
     config.s = !config.t;
-
-}
-void initialize(){
-}
-void nbody_solver(){
+	fprintf(stdout,"cobfiig pars:  Q:%d, N: %d , P: %d \n",config.Q, config.N, config.P);
 }
 SGMatrix *Y;
 Time::TimeUnit exTime;
@@ -415,12 +416,14 @@ void fmm_solver(){
 	pts_ptr= new Matrix (N,3);
 	Matrix &pts=*pts_ptr;
     Reader rdr(config.tree,config.ops,OT);
+	TL;
     rdr.read();
     rdr.read_op();
     OT.Q = config.Q;
     init(pts);
 
 	EventLog *eN = new EventLog("ComputeNearFieldOps");
+	TL;
     compute_near_field(OT,pts);
 	delete eN;
     
@@ -438,27 +441,38 @@ void fmm_solver(){
 	Q_p=new SGMatrix(q);
 	SGMatrix &Q = *Q_p;
 	Y=&Q;
+	TL;
 	tic();
 	eFMM = new EventLog("FMM");
 	exTime= Time::getTime();
     EventLog *eMvn= new EventLog("Mv_near");
 
     mv_near_field(OT,C,Q);
-	
+	TL;
 	delete eMvn;
 
     EventLog *eMv= new EventLog("Mv_far");
-
+	TL;
 	MatVec(OT,C,Q);
 
 	delete eMv;
+	TL;
 	cout << Time::getTime() << endl;
-	EventLog *b = new EventLog("Barrier.");
+	TL;
+	TL;
+	//EventLog *b = new EventLog("Barrier.");
+	TL;
 	Time::TimeUnit bs=Time::getTime();
-	if (config.t)
+	TL;
+	if (config.t){
+	TL;
 		sgEngine->barrier();
+	TL;
+	}
+	TL;
 	bs=Time::getTime()-bs;
-	delete b;
+	TL;
+	//delete b;
 	delete eFMM;
 	double execTime = ((Time::getTime() - exTime)*1.0)/3000000000.0;
 	cout << " Finished. Time(s): " << toc() << ", " << execTime << ", Barrier: " << bs/3e9 << ", #Tasks:" << stats.t << endl;
@@ -473,18 +487,20 @@ void show_affinity() ;
 int main(int argc , char *argv[])
 {
     if ( argc <9){
-        fprintf(stderr,"Usage %s N L Q S T trre_file ops_file nfstSOwa \n",argv[0]);
+        fprintf(stderr,"Usage %s N L Q S T tree_file ops_file nfstSOwa \n",argv[0]);
         exit(-1);
     }
     parse_args(argc,argv);
 	stats.t = 0;
-
+	TL;
 	submit_time = 0;
 	pool = new MemoryPool(1e9);
 	if(config.t)
 		sgEngine = new SuperGlue<Options>(config.cores);
     show_affinity();
-    
+
+    TL;
+
 	fmm_solver();
 	cout << Time::getTime() << endl;
 	//EventLog *b = new EventLog("Barrier.");
@@ -497,9 +513,9 @@ int main(int argc , char *argv[])
 	cout << "#Data Handles: " << XType::LastHandle << endl;
 	cout << "Total submit time: " << submit_time/3e9 << endl;
 
-    //SaveDAG_task<Options>::dump("fmm.dot");
-    //SaveDAG_data<Options>::dump("fmm_data.dot");
-
+  /*  SaveDAG_task<Options>::dump("fmm.dot");
+    SaveDAG_data<Options>::dump("fmm_data.dot");
+*/
 	char res[25];
     sprintf(res,"results_%c_%c_%c_%c.txt",
             config.n?'n':'f',

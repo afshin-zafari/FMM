@@ -259,7 +259,7 @@ private:
 public:
 	Time::TimeUnit  s,r,f,d;
 	int type;
-    bool transA;
+    bool transA,near_field;
     enum{
 		Read=ReadWriteAdd::read,
 		Write=ReadWriteAdd::write,
@@ -269,20 +269,27 @@ public:
         A = &A_;
         v = &v_.get_part(i1);
         y = &Y_.get_part(i2);
+		near_field = false;
         register_args();
     }
     SGTaskGemv(SGMatrix &A_, SGMatrix &v_, SGMatrix &Y_){
         A = &A_;
         v = &v_;
         y = &Y_;
+		near_field = true;
         register_args();
     }
     void register_args(){
         SGHandle &hA = A->get_handle();
         SGHandle &hv = v->get_handle();
         SGHandle &hy = y->get_handle();
-        register_access(ReadWriteAdd::read, hA);
-        register_access(ReadWriteAdd::read, hv);
+		if (config.h){
+			register_access(ReadWriteAdd::read, hA);
+			register_access(ReadWriteAdd::read, hv);
+		}
+		else
+			if (!near_field)
+				register_access(ReadWriteAdd::read, hv);
         if ( config.w )
             register_access(ReadWriteAdd::write, hy);
         else
@@ -293,6 +300,9 @@ public:
     //void register_access(int axs, SGHandle &h){}
     void run(){
 		r = Time::getTime();
+		assert(A->get_matrix());
+		assert(v->get_matrix());
+		assert(y->get_matrix());
         const int M = A->get_matrix()->rows();
         const int N = A->get_matrix()->cols();
         const int lda = M;
@@ -315,14 +325,14 @@ public:
             assert(N==my );
             assert(M==mx );
         }
-        //cblas_dgemv(COL_MAJOR,transA,M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
 		if ( !config.x)
-			dgemv(transA?'T':'N',M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
+	        cblas_dgemv(COL_MAJOR,transA,M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
+		///if ( !config.x)			dgemv(transA?'T':'N',M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
 		f = Time::getTime();
     }
 	~SGTaskGemv(){
 		d = Time::getTime();
-		//fprintf(stdout,"%ld, %ld, %ld, %ld, %d\n",s,r,f,d,type);
+		fprintf(stdout,"%ld, %ld, %ld, %ld, %d\n",s,r,f,d,type);
 	}
 	std::string get_name(){return name;}
 	void set_name(const char *s){name=s;}

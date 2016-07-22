@@ -11,12 +11,13 @@
 struct Options : public DefaultOptions<Options> {
     typedef Enable TaskName;
     typedef Trace<Options> Instrumentation;
-	/*
+	/*	
 	typedef Enable TaskId;
     typedef Enable HandleId;
     typedef Enable HandleName;
     typedef SaveDAG<Options> LogDAG;
-	*/ 
+	*/
+	 
 };
 
 #define SGHandle Handle<Options> 
@@ -202,6 +203,8 @@ public:
     void set_part(int i, int m ,  int n, double *mem){
         SGMatrix *MM =  new SGMatrix;
         Matrix *M = new Matrix(m,n,mem);
+		assert(M);
+		TL;
         MM->set_mat(M);
         parts[i-1]=MM;
     }
@@ -209,7 +212,7 @@ public:
             M = M_;
     }
 	~SGMatrix(){
-		fprintf(stdout,"~SGMatrix\n");
+		//fprintf(stdout,"~SGMatrix\n");
 	}
 };
 class SGVector : public SGMatrix

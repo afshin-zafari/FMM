@@ -6,7 +6,9 @@
 #include <typeinfo>
 #include <type_traits>
 using namespace std;
-
+#define TL fprintf(stdout,"%20.20s, %20.20s, %d\n",__FILE__,__FUNCTION__,__LINE__);
+//#define TL cout << __FILE__<< ' ' << __FUNCTION__<< " " << __LINE__ << endl 
+//#define TL 
 
 class XType
 {
