@@ -34,15 +34,24 @@ t=[[0,0],
    [0,0],
    [0,0],
    [0,0]]
+def get_type(s):
+  types=['Leaves->Second','Upward','Translation','Downward','Second','NearField']
+  for i in range(len(types)):
+    if types[i]==s:
+      return i
+  return -1
 f=open(f2,'rb')
 i=0
+
 for line in f :
   if line[0] =='a': continue
   if line[0] =='s': continue
   flds=line.split()
-  t[i][0]=float(flds[1])
-  t[i][1]=int(flds[3])
-  i +=1
+  i=get_type(flds[4])
+  if i>=0:
+    t[i][0]=float(flds[1])
+    t[i][1]=int(flds[3])
+  #i +=1
 f.close()
 tT = sum([tt[1] for tt in t])
 if 's' in F: T=0

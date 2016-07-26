@@ -426,17 +426,18 @@ void mv_near_field(Tree &OT,SGMatrix &C, SGMatrix &Q){
     }
 	TL;
 
-
-    int nfCount = OT.NearField.size();
-	TL;
-    for (int i=0;i<nfCount;i++)
-    {
-        NearFieldBlock *nf=OT.NearField[i];
-		TL;
-        gemv (*nf->sgMat,C.get_part(nf->j),Q.get_part(nf->i));
-        if(dbg)fprintf(stdout,"Nfld(%d,%d) \n",nf->j,nf->i);
-    }
-	TL;
-    if(dbg)fprintf(stdout,"Near Field Tasks submitted\n");
-	TL;
+	if (config.NF){
+	  int nfCount = OT.NearField.size();
+	  TL;
+	  for (int i=0;i<nfCount;i++)
+	    {
+	      NearFieldBlock *nf=OT.NearField[i];
+	      TL;
+	      gemv (*nf->sgMat,C.get_part(nf->j),Q.get_part(nf->i));
+	      if(dbg)fprintf(stdout,"Nfld(%d,%d) \n",nf->j,nf->i);
+	    }
+	  TL;
+	  if(dbg)fprintf(stdout,"Near Field Tasks submitted\n");
+	  TL;
+	}
 }

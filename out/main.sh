@@ -8,12 +8,16 @@ export LD_LIBRARY_PATH=${ACML_DIR}/lib:${LD_LIBRARY_PATH}
 
 expdir=Exp${j}_N${N}_P${S}_Q${Q}_${flags}_${T}cores
 ex=$(ls -d Exp*_N${N}_P${S}_Q${Q}_${flags}_${T}cores)
+curd=$(pwd)
 if [ "z${ex}z" != "zz"   ] ; then 
     return
+    echo "----"
+    cd $ex
+else
+    mkdir $expdir
+    cd $expdir
 fi
-mkdir $expdir
-curd=$(pwd)
-cd $expdir
+
 
 
 
