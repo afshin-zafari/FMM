@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+lstopo --force --of TXT topology.TXT
 ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
 ACML_LIB=${ACML_DIR}/lib/libacml.a
 export LD_LIBRARY_PATH=${ACML_DIR}/lib:${LD_LIBRARY_PATH}
@@ -25,6 +25,12 @@ Ops="${indir}/operators_N${N}_L${L}_Q${Q}_S${S}.txt"
 ref="${indir}/result_N${N}_L${L}_Q${Q}_S${S}.txt"
 out=time_${flags}.txt
 
+if [ ! -f $Tree ];
+then
+  echo "Not exist:    $Tree"
+  cd $curd
+  return
+fi
 $app $N $L $Q $S $T $Tree $Ops $flags >$out
 
 

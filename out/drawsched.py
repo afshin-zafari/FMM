@@ -138,7 +138,7 @@ def getMedian(numericValues):
 import matplotlib.pyplot as plt
 
 def drawBox(x0,x1,y0,y1,col):
-    plt.fill([x0, x1, x0], [y0, (y0+y1)/2, y1], fc=col[0], ec=col[1], linewidth=.5)
+    plt.fill([x0, x1, x0], [y0, (y0+y1)/2, y1], fc=col[0], ec=col[0], linewidth=.5)#edge color is the same as fill color, to have invisible edges
 
 def drawText(x,y,text):
     plt.text(x,y,text,horizontalalignment='center',verticalalignment='center',fontsize=taskfontsize)

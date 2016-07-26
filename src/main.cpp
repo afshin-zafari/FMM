@@ -349,6 +349,7 @@ void parse_args(int argc , char *argv[]){
     std::string::size_type pos;
     config.N = N = atoi(argv[1]);
     config.L = L = atoi(argv[2]);
+    config.NF=config.FF=false;
 	config.Q     = atoi(argv[3]);
 	config.P     = atoi(argv[4]);
 	config.cores = atoi (argv[5]);
@@ -394,6 +395,12 @@ void parse_args(int argc , char *argv[]){
     pos = s.find("h");
     if ( pos != std::string::npos )
         config.h = true;
+    pos = s.find("F");
+    if ( pos != std::string::npos )
+        config.FF = true;
+    pos = s.find("N");
+    if ( pos != std::string::npos )
+        config.NF = true;
     config.n = !config.f;
     config.O = !config.S;
     config.w = !config.a;
@@ -446,14 +453,16 @@ void fmm_solver(){
 	eFMM = new EventLog("FMM");
 	exTime= Time::getTime();
     EventLog *eMvn= new EventLog("Mv_near");
-
-    mv_near_field(OT,C,Q);
+    
+    if(config.NF)
+      mv_near_field(OT,C,Q);
 	TL;
 	delete eMvn;
 
     EventLog *eMv= new EventLog("Mv_far");
 	TL;
-	MatVec(OT,C,Q);
+	if(config.FF)
+	  MatVec(OT,C,Q);
 
 	delete eMv;
 	TL;
