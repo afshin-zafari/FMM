@@ -10,6 +10,7 @@ expdir=Exp${j}_N${N}_P${S}_Q${Q}_${flags}_${T}cores
 ex=$(ls -d Exp*_N${N}_P${S}_Q${Q}_${flags}_${T}cores)
 curd=$(pwd)
 if [ "z${ex}z" != "zz"   ] ; then 
+    cp $ex/trace_f_t_S_w.txt $ex/trace_N${N}_P${S}_Q${Q}_${flags}_${T}cores
     return
     echo "----"
     cd $ex

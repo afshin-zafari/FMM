@@ -162,20 +162,26 @@ def drawTask(x0,x1,y0,y1,orgtext):
 def drawPlot(tasks):
     height = 1.0
     barHeight = height * 0.8
-
+    right_edge = 0
     for task in tasks:
         x0 = task['start']
         x1 = x0 + task['length']
         y0 = task['threadid'] * height - barHeight / 2.0
         y1 = y0 + barHeight
-        drawTask(x0/3., x1/3., y0, y1, task['name'])
+        if x1>right_edge:
+            right_edge = x1
+        drawTask(x0, x1, y0, y1, task['name'])
 
     padding = barHeight/2
     plt.ylim([ -barHeight/2 - padding, (numThreads-1)*height + barHeight/2 + padding]);
+    
+    plt.xlim([0, right_edge])
     yticks=range(0, numThreads)
     plt.yticks(yticks, yticks);
     plt.xlabel(r'Time(ms)')#,fontsize=labelfontsize)
     plt.ylabel(r'Thread')#,fontsize=labelfontsize)
+    y_len=  (numThreads-1)*height + barHeight/2 + padding +barHeight/2 + padding
+    plt.axes().set_aspect(right_edge/y_len/2)
 
 
 ##################################################
@@ -183,11 +189,23 @@ def drawPlot(tasks):
 filename = "schedule.dat"
 if len(sys.argv) > 1:
     filename = sys.argv[1]
+if len(sys.argv) > 2:
+    fillcols[0]=sys.argv[2]
+if len(sys.argv) > 3:
+    fillcols[1]=sys.argv[3]
+if len(sys.argv) > 4:
+    fillcols[2]=sys.argv[4]
+if len(sys.argv) > 5:
+    fillcols[3]=sys.argv[5]
+if len(sys.argv) > 6:
+    fillcols[4]=sys.argv[6]
+if len(sys.argv) > 7:
+    fillcols[5]=sys.argv[7]
 
 #taskfontsize = 16
 #labelfontsize = 16
 #tickfontsize = 16
-timeScale = 1.0/1000000.0; # cycles -> Mcycles
+timeScale = 1.0/1000000.0/3; # cycles -> Mcycles -> mili seconds
 
 tasks = load_file(filename)
 
