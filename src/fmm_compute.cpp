@@ -1,5 +1,6 @@
 #include "types.hpp"
 
+namespace FMM{
 extern Config config;
 Statistics stats;
 
@@ -296,11 +297,11 @@ void MatVec(  Tree & OT,SGMatrix &x , SGMatrix &y){
       for ( int jj = 1; jj<=length(OT.Levels(iLev).group(iGroup).intList);jj++){
 	Time::TimeUnit tt = Time::getTime();
 	int jGroup = OT.Levels(iLev).group(iGroup).intList(jj) ;
-	double t1 = round(
+	double t1 = std::round(
 			  ( OT.Levels(iLev).group(jGroup).groupcenter(1) -
 			    OT.Levels(iLev).group(iGroup).groupcenter(1) ) /
 			  OT.Levels(iLev).group(iGroup).cubelength ) ;
-	double t2 = round(
+	double t2 = std::round(
 			  ( OT.Levels(iLev).group(jGroup).groupcenter(2) -
 			    OT.Levels(iLev).group(iGroup).groupcenter(2) ) /
 			  OT.Levels(iLev).group(iGroup).cubelength ) ;
@@ -451,3 +452,4 @@ for g in last level
     }
 }
 /*=======================================================================================*/
+}//namespace FMM

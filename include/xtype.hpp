@@ -10,6 +10,7 @@ using namespace std;
 //#define TL cout << __FILE__<< ' ' << __FUNCTION__<< " " << __LINE__ << endl 
 #define TL 
 
+namespace FMM{
 class XType
 {
 protected:
@@ -199,5 +200,5 @@ public:
 
 
 };
-
+}//namespace FMM
 #endif // XTYPE_HPP_INCLUDED

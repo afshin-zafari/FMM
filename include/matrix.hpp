@@ -10,6 +10,7 @@
 #define ROW_RANGE(i)  ((i>=0)&&(i<M))
 #define COL_RANGE(j)   ((j>=0)&& (j<N))
 #include <vector>
+namespace FMM{
 typedef double ElementType;
 typedef unsigned char byte;
 
@@ -517,4 +518,5 @@ Matrix &diff(Matrix &);
 Matrix &find(Matrix &);
 Matrix &hcat(Matrix &, Matrix &);
 
+}//namespace FMM
 #endif // MATRIX_HPP_INCLUDED
