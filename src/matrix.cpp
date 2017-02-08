@@ -4,7 +4,6 @@
 #include <fstream>
 
 #include "matrix.hpp"
-//#include "lapacke.h"
 
 using namespace std;
 Matrix &repmat(Matrix &M, int r, int c)
