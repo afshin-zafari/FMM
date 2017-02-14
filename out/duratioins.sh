@@ -11,16 +11,11 @@
 
 module load python/3.5.0
 
-list=$(ls -R N1e5/*MFN*/*tra*_t_*.txt)
+list=$(ls -R */*/*prog_dur*.txt)
 
 for f in $list
 do
-    if [ -e "${f}.pdf" ] ; then 
-	echo "$f ----- Schedule drawn"
-	continue;
-    fi
-    echo $f
-    python drawsched.py $f
+    cat $f >> all_dur.txt
 done
 
 

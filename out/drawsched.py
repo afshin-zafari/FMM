@@ -17,6 +17,7 @@ import re
 def myfilter(x):
     return True
 
+
 fillcols = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']
 edgecols = ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000']
 coldict = dict()
@@ -67,51 +68,16 @@ def load_file(filename):
             continue
         if line.startswith('#'):
             continue
-        # [thread id]: [start] [length] [name [perf]]
-        g = pattern.match(line)
-        if g != None:
-          name = g.group(4)
-          gg = cpattern.match(name)
-          cache = 0
-          if gg != None:
-              name = gg.group(1)
-              cache = int(gg.group(2))
-          out.append({'name': name.strip(),
-                      'procid': 0,
-                      'threadid': int(g.group(1)),
-                      'start': int(g.group(2)),
-                      'length': int(g.group(3)),
-                      'end': int(g.group(2)) + int(g.group(3)),
-                      'cache': cache})
-          continue
 
-        # [node number] [thread id]: [start] [length] [name [perf]]
-        g = mpipattern.match(line)
-        if g != None:
-          name = g.group(5)
-          gg = cpattern.match(name)
-          cache = 0
-          if gg != None:
-            name = gg.group(1)
-            cache = int(gg.group(2))
-          out.append({'name': name.strip(),
-                      'procid': int(g.group(1)),
-                      'threadid': int(g.group(2)),
-                      'start': int(g.group(3)),
-                      'length': int(g.group(4)),
-                      'end': int(g.group(3)) + int(g.group(4)),
-                      'cache': cache})
-          continue
-
-        # [thread id] [start] [length] [name]
+        # [proc id] [thread id] [start] [length] [name]
         w = line.split()
-        if len(w) == 4:
-          out.append({'name': w[3],
+        if len(w) == 5:
+          out.append({'name': w[4],
                       'procid': 0,
-                      'threadid': int(w[0]),
-                      'start':  float(w[1])*1e6,
-                      'length': float(w[2])*1e6,
-                      'end': (float(w[1])+float(w[2]))*1e6,
+                      'threadid': int(w[1].strip(':')),
+                      'start':  float(w[2]),
+                      'length': float(w[3]),
+                      'end': (float(w[2])+float(w[3])),
                       'cache': 0})
           continue
 
@@ -180,7 +146,7 @@ def drawPlot(tasks):
 
 ##################################################
 
-filename = "schedule.dat"
+filename = "trace_f_t_S_w.txt"
 if len(sys.argv) > 1:
     filename = sys.argv[1]
 

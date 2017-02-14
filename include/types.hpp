@@ -2,6 +2,7 @@
 #define TYPES_HPP_INCLUDED
 
 #include <iostream>
+#include <list>
 #include <vector>
 #include <cmath>
 #include <stdio.h>
@@ -12,7 +13,9 @@
 #include "acml.h"
 #include "matrix.hpp"
 #include "sgmatrix.hpp"
+#ifdef WITH_DUCTTEIP
 #include "ductteip.hpp"
+#endif
 
 #ifndef OMP_TASKS
 #include "sg/superglue.hpp"
@@ -25,6 +28,7 @@
 #define svd_threshold 1.0e-2
 
 using namespace std;
+  /*---------------------------------------*/
 namespace FMM{
   const int Q = 10;
   Config config;
@@ -32,6 +36,7 @@ namespace FMM{
   typedef Matrix& (*KernelFcn)(Matrix &);
 
 
+  /*---------------------------------------*/
   template <typename T>
   class elastic_vect{
   public:
@@ -150,6 +155,7 @@ namespace FMM{
       return *content[i*N+j];
     }
   };
+  /*---------------------------------------*/
   typedef int GroupId;
   typedef double PointType;
   class GroupType{
@@ -180,6 +186,7 @@ namespace FMM{
 
     }
   };
+  /*---------------------------------------*/
   class Level{
   public:
     elastic_vect<GroupType> group;
@@ -200,6 +207,7 @@ namespace FMM{
       }
     }
   };
+  /*---------------------------------------*/
   struct NearFieldBlock{
   public:
     int from_row,to_row,from_col,to_col;
@@ -214,6 +222,7 @@ namespace FMM{
       sgMat = new SGMatrix(*M);
     }
   };
+  /*---------------------------------------*/
   struct Partition {
   public:
     Partition(int i, int _n, double *m):index(i),n(_n){        
@@ -224,6 +233,7 @@ namespace FMM{
     SGHandle handle;
   };
   typedef elastic_vect<Partition*> PartitionedVector;
+  /*---------------------------------------*/
   class Tree{
   public:
     int Q;
@@ -254,6 +264,7 @@ namespace FMM{
     MvTask(SGMatrix &M,SGMatrix &S,int column,SGVector &y){}
   };
 
+  /*---------------------------------------*/
   void cblas_dgemv(const int layout,
 		   const bool TransA,
 		   const int M, const int N,
@@ -277,6 +288,7 @@ namespace FMM{
       return (tv.tv_sec * 1000000 + tv.tv_usec)/1000000.0;
     }
   }
+  /*---------------------------------------*/
   struct ReadWriteAdd{
     const static int read=0;
     const static int write=1;
@@ -284,14 +296,34 @@ namespace FMM{
   };
 
 #endif
+  /*========================================================================*/
+  struct TraceInfo{
+    int t;
+    string s;
+    double r,f;
+    TraceInfo(int _t, double _r, double _f, string _s):
+      t(_t), r(_r),f(_f), s(_s)
+    {  }
+  };
+  FILE *trace_file;
+  list<TraceInfo*> trace;
+  int get_owner(int level,int group_idx){return -1;}
+  int get_proc_id(){
+    #if WITH_DUCTTEIP
+       return ::me;       
+    #else
+       return 0;
+    #endif
+  }
   class SGTaskGemv : public Task<Options, 3> {
   private:
     SGMatrix *A,*v,*y;
     string name;
   public:
     Time::TimeUnit  s,r,f,d;
-    int type,p1,p2;
-    bool transA,near_field;
+    int type,p1,p2,v_owner,y_owner;
+    
+    bool transA,near_field,iam_host;
     enum{
       Read=ReadWriteAdd::read,
       Write=ReadWriteAdd::write,
@@ -305,6 +337,9 @@ namespace FMM{
       near_field = false;
       p1 = i1;
       p2 = i2;
+      v_owner = get_owner(v_.level,i1);
+      y_owner = get_owner(Y_.level,i2);
+      iam_host = (get_proc_id() == y_owner);
       register_args();
     }
     SGTaskGemv(SGMatrix &A_, SGMatrix &v_, SGMatrix &Y_){
@@ -366,11 +401,13 @@ namespace FMM{
 	//#pragma omp task depend(in:Matrix[0:M][0:N],X[0:N]) depend(inout:Y[0:N])
 #pragma omp task depend(inout:Y[0:N])
 	{
+	  r = Time::getTime();
 	  cblas_dgemv(COL_MAJOR,transA,M, N, 1.0, Mat, lda, X, 1, 1.0, Y, 1);
 	  f = Time::getTime() ;
 	  int thrd = omp_get_thread_num();
 	  int cnt =  omp_get_num_threads();
-	  fprintf(stdout,"0 %d: %lf %lf %s %d\n",thrd,r*1e6,(f-r)*1e6,name.c_str(),cnt);
+	  fprintf(trace_file,"0 %d: %lf %lf %s\n",thrd,r*1e6,(f-r)*1e6,name.c_str());
+	  //trace.push_back ( new TraceInfo(thrd,r,f,name));
 	}
 	return;
       }

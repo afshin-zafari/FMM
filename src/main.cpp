@@ -13,7 +13,7 @@
   SuperGlue<Options> *sgEngine;
 #endif //OMP_TASKS
 
-Time::TimeUnit exTime;
+FMM::Time::TimeUnit exTime;
 FMM::Matrix   *pts_ptr,*c_p,*q_p;
 FMM::SGMatrix *Y,*C_p,*Q_p;
 FMM::Tree     *OT_ptr;
@@ -67,9 +67,9 @@ void fmm_solver(){
   Q_p=new FMM::SGMatrix(q);
   FMM::SGMatrix &Q = *Q_p;
   Y=&Q;
-  exTime= Time::getTime();
+  exTime= FMM::Time::getTime();
     
-  cout << Time::getTime() << endl;
+  cout << FMM::Time::getTime() << endl;
       timeval tv;
     int e=gettimeofday(&tv,NULL);
     cout << "TOD: " << tv.tv_sec <<"," << tv.tv_usec << "," << e << endl;
@@ -88,16 +88,16 @@ void fmm_solver(){
     }
 #pragma omp taskwait 
 #pragma omp barrier 
-  cout << Time::getTime() << endl;
+    cout << FMM::Time::getTime() << endl;
      e=gettimeofday(&tv,NULL);
 			     cout << "TOD: " << tv.tv_sec <<"," << tv.tv_usec << "," << e << endl;
 #ifndef OMP_TASKS
   if (FMM::config.t){
     sgEngine->barrier(); // Wait until all tasks finished
   }
-  double execTime = ((Time::getTime() - exTime)*1.0)/3000000000.0;
+  double execTime = ((FMM::Time::getTime() - exTime)*1.0)/3000000000.0;
 #else  
-  double execTime = ((Time::getTime() - exTime)*1.0);
+  double execTime = ((FMM::Time::getTime() - exTime)*1.0);
 #endif  
   cout << " Program Finished. Time(s): " <<  execTime << endl;
     
@@ -111,7 +111,16 @@ int main(int argc , char *argv[])
   }
   FMM::parse_args(argc,argv);
   FMM::stats.t = 0;
-  FMM::pool = new FMM::MemoryPool(1e9);
+  char trace[25];
+  sprintf(trace,"trace_%c_%c_%c_%c.txt",
+	  FMM::config.n?'n':'f',
+	  FMM::config.s?'s':'t',
+	  FMM::config.S?'S':'O',
+	  FMM::config.w?'w':'a'
+	  );
+  FMM::trace_file = fopen(trace,"w");  
+
+
 #ifndef OMP_TASKS
   if(FMM::config.t)
     sgEngine = new SuperGlue<Options>(FMM::config.cores);
@@ -129,15 +138,9 @@ int main(int argc , char *argv[])
 	
   Y->get_matrix()->export_data(res);
     
-  char trace[25];
-  sprintf(trace,"trace_%c_%c_%c_%c.txt",
-	  FMM::config.n?'n':'f',
-	  FMM::config.s?'s':'t',
-	  FMM::config.S?'S':'O',
-	  FMM::config.w?'w':'a'
-	  );
 #ifndef OMP_TASKS
   Trace<Options>::dump(trace);
+#else  
+  fclose(FMM::trace_file);
 #endif
-  delete FMM::pool;
 }

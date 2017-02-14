@@ -3,6 +3,7 @@
 lstopo --force --of TXT topology.TXT
 ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
 ACML_LIB=${ACML_DIR}/lib/libacml.a
+LD_PATH_ORG=${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=${ACML_DIR}/lib:${LD_LIBRARY_PATH}
 
 
@@ -47,12 +48,17 @@ missed=../../../out/missed_time.py
 dbrec=../../../out/dbrec.py
 
 ttimes=task_times.txt
-
+dur=prog_dur.txt
 set +x
 module load python 
 set -x
-python $compare $ref $res>>$out
 
+grep -i "Program Finished" $out > ftemp
+echo -n "$N $L $Q $S $T $flags" > $dur
+cat ftemp >> $dur
+rm ftemp
+
+python $compare $ref $res>>$out
 python $task_times $out > $ttimes
 python $missed $out >> $out
 python $dbrec $N $L $S $Q $T $flags $out $ttimes >dbrec.txt
@@ -65,3 +71,4 @@ done
 
 
 cd $curd
+LD_LIBRARY_PATH=${LD_PATH_ORG}

@@ -4,29 +4,29 @@
 
 #include "xtype.hpp"
 namespace FMM{
-#ifndef OMP_TASKS
-#include "sg/superglue.hpp"
-#include "sg/option/instr_trace.hpp"
-#include "sg/option/savedag_task.hpp"
-#include "sg/option/savedag_data.hpp"
+    #ifndef OMP_TASKS
+    #include "sg/superglue.hpp"
+    #include "sg/option/instr_trace.hpp"
+    #include "sg/option/savedag_task.hpp"
+    #include "sg/option/savedag_data.hpp"
 
-  struct Options : public DefaultOptions<Options> {
-    typedef Enable TaskName;
-    typedef Trace<Options> Instrumentation;
+    struct Options : public DefaultOptions<Options> {
+      typedef Enable TaskName;
+      typedef Trace<Options> Instrumentation;
 	 
-  };
+    };
 
-  extern SuperGlue<Options> *sgEngine;
-#else
-  struct Options{};
-  template <typename T> class Handle{};
-#endif // OMP_TASKS
+    extern SuperGlue<Options> *sgEngine;
+    #else
+      struct Options{};
+      template <typename T> class Handle{};
+    #endif // OMP_TASKS
 
 #define SGHandle Handle<Options> 
 
   typedef unsigned long MyHandle;
   typedef unsigned int uint;
-
+  /*============================================================================*/
   class SGMatrix: public XType
   {
     MyHandle *sg_handle;
@@ -36,12 +36,15 @@ namespace FMM{
     bool trans;
     int pM,pN;
   public:
+    int level;
+  /*----------------------------------------------------------------------------*/
     SGMatrix():XType("X",(void *)this)
     {
       sg_handle = new MyHandle(++LastHandle);
       sgHandle = new SGHandle;
       trans=false;
     }
+  /*============================================================================*/
     SGMatrix(const char *p):XType(p,(void *)this)
     {
       sg_handle  = new MyHandle(++LastHandle);
@@ -51,12 +54,14 @@ namespace FMM{
       //cout << "last-h: "<< LastHandle << endl;
       //cout << "  sg-h: "<< *sg_handle << endl;
     }
+  /*============================================================================*/
     SGMatrix(Matrix &m):XType("",(void *)this){
       sg_handle = new MyHandle(++LastHandle);
       sgHandle = new SGHandle;
       trans=false;
       M = &m;
     }
+  /*============================================================================*/
     SGMatrix & operator =(XType & rhs)
     {
       const char *op="asgn";
@@ -71,6 +76,7 @@ namespace FMM{
       return S;
     }
 
+  /*============================================================================*/
     void interpret()
     {
       if ( op != '=')
@@ -129,27 +135,34 @@ namespace FMM{
       else
 	cout << "gemm task\n";
     }
+  /*============================================================================*/
     void setMatrix(Matrix &A){
       M=&A;
     }
+  /*============================================================================*/
     Matrix *get_matrix()
     {
       return M;
     }
+  /*============================================================================*/
     MyHandle get_myhandle()
     {
       return *sg_handle;
     }
+  /*============================================================================*/
     SGHandle &get_handle(){
       return *sgHandle;
     }
+  /*============================================================================*/
     typedef enum Partition {Column,Row} Partition;
+  /*============================================================================*/
     void build(int rows, int cols, Partition p)
     {
       M = new Matrix(rows,cols,p);
       if ( p == SGMatrix::Column)
 	do_col_partition(cols);
     }
+  /*============================================================================*/
     void operator =(Matrix &rhs)
     {
       if ( !M){
@@ -161,6 +174,7 @@ namespace FMM{
 	;
     }
 
+  /*============================================================================*/
     void do_col_partition ( int c)
     {
       pM = 1;
@@ -178,29 +192,34 @@ namespace FMM{
 	}
     }
 
+  /*============================================================================*/
     SGMatrix &column(int c)
     {
       return *pcols[c-1];
     }
 
+  /*============================================================================*/
     SGMatrix &transpose()
     {
       SGMatrix &X= *new SGMatrix;
       X.trans= !trans;
       return X;
     }
+  /*============================================================================*/
     SGMatrix &get_part(uint i){
       i--;
       assert ( i>=0);
       assert ( i< parts.size());
       return *parts[i];
     }
+  /*============================================================================*/
     void set_part_size(int n){
       do{
 	parts.push_back((SGMatrix *)nullptr);
       }while(n--);
 
     }
+  /*============================================================================*/
     void set_part(int i, int m ,  int n, double *mem){
       SGMatrix *MM =  new SGMatrix;
       Matrix *M = new Matrix(m,n,mem);
@@ -209,13 +228,16 @@ namespace FMM{
       MM->set_mat(M);
       parts[i-1]=MM;
     }
+  /*============================================================================*/
     void set_mat(Matrix *M_){
       M = M_;
     }
+  /*============================================================================*/
     ~SGMatrix(){
       //fprintf(stdout,"~SGMatrix\n");
     }
   };
+  /*============================================================================*/
   class SGVector : public SGMatrix
   {
   public:
