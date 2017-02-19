@@ -1,8 +1,0 @@
-average distance between tasks' events in microseconds
-submit-run 	 run-finish 	 finish-destr 	   count 	 type 
-562837.49 	     66.38 	      0.90 	     516 	 Leaves->Second Last
-561677.57 	     22.93 	      1.18 	     960 	 Upward
-560418.91 	     26.24 	      0.61 	    2688 	 Translation
-648074.52 	     72.61 	      0.58 	     516 	 Second Last->Leaves
-650405.38 	     19.11 	      0.94 	     960 	 Downward
-262873.10 	    229.21 	      0.63 	    2092 	 NearField

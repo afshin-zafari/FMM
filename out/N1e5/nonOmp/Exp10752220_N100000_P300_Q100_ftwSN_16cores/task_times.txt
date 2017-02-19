@@ -1,3 +1,0 @@
-average distance between tasks' events in microseconds
-submit-run 	 run-finish 	 finish-destr 	   count 	 type 
- 63924.79 	   2005.78 	      2.62 	    1076 	 NearField
