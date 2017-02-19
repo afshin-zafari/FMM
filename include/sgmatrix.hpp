@@ -223,8 +223,7 @@ namespace FMM{
     void set_part(int i, int m ,  int n, double *mem){
       SGMatrix *MM =  new SGMatrix;
       Matrix *M = new Matrix(m,n,mem);
-      assert(M);
-      TL;
+      assert(M);      
       MM->set_mat(M);
       parts[i-1]=MM;
     }

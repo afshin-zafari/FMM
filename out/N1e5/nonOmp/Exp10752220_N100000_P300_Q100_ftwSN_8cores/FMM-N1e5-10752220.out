@@ -1,0 +1,1036 @@
++ N=100000
++ j=10752220
++ for F in F N
++ flags=ftwSF
++ S=300
++ for Q in 010 020 050 100
++ '[' 300 -eq 400 ']'
++ '[' 300 -eq 200 ']'
++ '[' 300 -eq 300 ']'
++ L=07
++ '[' 300 -eq 100 ']'
++ '[' 300 -eq 050 ']'
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_ftwSF_1cores
++++ ls -d Exp10751474_N100000_P300_Q010_ftwSF_1cores
+++ ex=Exp10751474_N100000_P300_Q010_ftwSF_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10751474_N100000_P300_Q010_ftwSF_1coresz '!=' zz ']'
+++ cp Exp10751474_N100000_P300_Q010_ftwSF_1cores/trace_f_t_S_w.txt Exp10751474_N100000_P300_Q010_ftwSF_1cores/trace_N100000_P300_Q010_ftwSF_1cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_ftwSF_4cores
++++ ls -d Exp10751474_N100000_P300_Q010_ftwSF_4cores
+++ ex=Exp10751474_N100000_P300_Q010_ftwSF_4cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10751474_N100000_P300_Q010_ftwSF_4coresz '!=' zz ']'
+++ cp Exp10751474_N100000_P300_Q010_ftwSF_4cores/trace_f_t_S_w.txt Exp10751474_N100000_P300_Q010_ftwSF_4cores/trace_N100000_P300_Q010_ftwSF_4cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_ftwSF_8cores
++++ ls -d Exp10751474_N100000_P300_Q010_ftwSF_8cores
+++ ex=Exp10751474_N100000_P300_Q010_ftwSF_8cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10751474_N100000_P300_Q010_ftwSF_8coresz '!=' zz ']'
+++ cp Exp10751474_N100000_P300_Q010_ftwSF_8cores/trace_f_t_S_w.txt Exp10751474_N100000_P300_Q010_ftwSF_8cores/trace_N100000_P300_Q010_ftwSF_8cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_ftwSF_16cores
++++ ls -d Exp10751474_N100000_P300_Q010_ftwSF_16cores
+++ ex=Exp10751474_N100000_P300_Q010_ftwSF_16cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10751474_N100000_P300_Q010_ftwSF_16coresz '!=' zz ']'
+++ cp Exp10751474_N100000_P300_Q010_ftwSF_16cores/trace_f_t_S_w.txt Exp10751474_N100000_P300_Q010_ftwSF_16cores/trace_N100000_P300_Q010_ftwSF_16cores
+++ return
++ T=1
++ flags=fswSF
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_fswSF_1cores
++++ ls -d Exp10752043_N100000_P300_Q010_fswSF_1cores
+++ ex=Exp10752043_N100000_P300_Q010_fswSF_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q010_fswSF_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q010_fswSF_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q010_fswSF_1cores/trace_N100000_P300_Q010_fswSF_1cores
+cp: cannot stat `Exp10752043_N100000_P300_Q010_fswSF_1cores/trace_f_t_S_w.txt': No such file or directory
+++ return
++ flags=ftwSF
++ for Q in 010 020 050 100
++ '[' 300 -eq 400 ']'
++ '[' 300 -eq 200 ']'
++ '[' 300 -eq 300 ']'
++ L=07
++ '[' 300 -eq 100 ']'
++ '[' 300 -eq 050 ']'
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_ftwSF_1cores
++++ ls -d Exp10752043_N100000_P300_Q020_ftwSF_1cores
+++ ex=Exp10752043_N100000_P300_Q020_ftwSF_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_ftwSF_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_ftwSF_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_ftwSF_1cores/trace_N100000_P300_Q020_ftwSF_1cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_ftwSF_4cores
++++ ls -d Exp10752043_N100000_P300_Q020_ftwSF_4cores
+++ ex=Exp10752043_N100000_P300_Q020_ftwSF_4cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_ftwSF_4coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_ftwSF_4cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_ftwSF_4cores/trace_N100000_P300_Q020_ftwSF_4cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_ftwSF_8cores
++++ ls -d Exp10752043_N100000_P300_Q020_ftwSF_8cores
+++ ex=Exp10752043_N100000_P300_Q020_ftwSF_8cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_ftwSF_8coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_ftwSF_8cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_ftwSF_8cores/trace_N100000_P300_Q020_ftwSF_8cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_ftwSF_16cores
++++ ls -d Exp10752043_N100000_P300_Q020_ftwSF_16cores
+++ ex=Exp10752043_N100000_P300_Q020_ftwSF_16cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_ftwSF_16coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_ftwSF_16cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_ftwSF_16cores/trace_N100000_P300_Q020_ftwSF_16cores
+++ return
++ T=1
++ flags=fswSF
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_fswSF_1cores
++++ ls -d Exp10752043_N100000_P300_Q020_fswSF_1cores
+++ ex=Exp10752043_N100000_P300_Q020_fswSF_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_fswSF_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_fswSF_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_fswSF_1cores/trace_N100000_P300_Q020_fswSF_1cores
+cp: cannot stat `Exp10752043_N100000_P300_Q020_fswSF_1cores/trace_f_t_S_w.txt': No such file or directory
+++ return
++ flags=ftwSF
++ for Q in 010 020 050 100
++ '[' 300 -eq 400 ']'
++ '[' 300 -eq 200 ']'
++ '[' 300 -eq 300 ']'
++ L=07
++ '[' 300 -eq 100 ']'
++ '[' 300 -eq 050 ']'
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_ftwSF_1cores
++++ ls -d Exp10752043_N100000_P300_Q050_ftwSF_1cores
+++ ex=Exp10752043_N100000_P300_Q050_ftwSF_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_ftwSF_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_ftwSF_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_ftwSF_1cores/trace_N100000_P300_Q050_ftwSF_1cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_ftwSF_4cores
++++ ls -d Exp10752043_N100000_P300_Q050_ftwSF_4cores
+++ ex=Exp10752043_N100000_P300_Q050_ftwSF_4cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_ftwSF_4coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_ftwSF_4cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_ftwSF_4cores/trace_N100000_P300_Q050_ftwSF_4cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_ftwSF_8cores
++++ ls -d Exp10752043_N100000_P300_Q050_ftwSF_8cores
+++ ex=Exp10752043_N100000_P300_Q050_ftwSF_8cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_ftwSF_8coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_ftwSF_8cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_ftwSF_8cores/trace_N100000_P300_Q050_ftwSF_8cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_ftwSF_16cores
++++ ls -d Exp10752043_N100000_P300_Q050_ftwSF_16cores
+++ ex=Exp10752043_N100000_P300_Q050_ftwSF_16cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_ftwSF_16coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_ftwSF_16cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_ftwSF_16cores/trace_N100000_P300_Q050_ftwSF_16cores
+++ return
++ T=1
++ flags=fswSF
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_fswSF_1cores
++++ ls -d Exp10752043_N100000_P300_Q050_fswSF_1cores
+++ ex=Exp10752043_N100000_P300_Q050_fswSF_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_fswSF_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_fswSF_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_fswSF_1cores/trace_N100000_P300_Q050_fswSF_1cores
+cp: cannot stat `Exp10752043_N100000_P300_Q050_fswSF_1cores/trace_f_t_S_w.txt': No such file or directory
+++ return
++ flags=ftwSF
++ for Q in 010 020 050 100
++ '[' 300 -eq 400 ']'
++ '[' 300 -eq 200 ']'
++ '[' 300 -eq 300 ']'
++ L=07
++ '[' 300 -eq 100 ']'
++ '[' 300 -eq 050 ']'
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_ftwSF_1cores
++++ ls -d 'Exp*_N100000_P300_Q100_ftwSF_1cores'
+ls: cannot access Exp*_N100000_P300_Q100_ftwSF_1cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_ftwSF_1cores
+++ cd Exp10752220_N100000_P300_Q100_ftwSF_1cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_ftwSF.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 1 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt ftwSF
+tid 547 affinity 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_t_S_w.txt
+++ res=./results_f_t_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_t_S_w.txt
+++ python ../../../out/task_times.py time_ftwSF.txt
+++ python ../../../out/missed_time.py time_ftwSF.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 1 ftwSF time_ftwSF.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_ftwSF_4cores
++++ ls -d 'Exp*_N100000_P300_Q100_ftwSF_4cores'
+ls: cannot access Exp*_N100000_P300_Q100_ftwSF_4cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_ftwSF_4cores
+++ cd Exp10752220_N100000_P300_Q100_ftwSF_4cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_ftwSF.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 4 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt ftwSF
+tid 565 affinity 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 566 affinity 01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 567 affinity 00100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 568 affinity 00010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_t_S_w.txt
+++ res=./results_f_t_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_t_S_w.txt
+++ python ../../../out/task_times.py time_ftwSF.txt
+++ python ../../../out/missed_time.py time_ftwSF.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 4 ftwSF time_ftwSF.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_ftwSF_8cores
++++ ls -d 'Exp*_N100000_P300_Q100_ftwSF_8cores'
+ls: cannot access Exp*_N100000_P300_Q100_ftwSF_8cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_ftwSF_8cores
+++ cd Exp10752220_N100000_P300_Q100_ftwSF_8cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_ftwSF.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 8 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt ftwSF
+tid 631 affinity 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 632 affinity 01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 633 affinity 00100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 634 affinity 00010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 635 affinity 00001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 636 affinity 00000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 637 affinity 00000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 638 affinity 00000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_t_S_w.txt
+++ res=./results_f_t_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_t_S_w.txt
+++ python ../../../out/task_times.py time_ftwSF.txt
+++ python ../../../out/missed_time.py time_ftwSF.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 8 ftwSF time_ftwSF.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_ftwSF_16cores
++++ ls -d 'Exp*_N100000_P300_Q100_ftwSF_16cores'
+ls: cannot access Exp*_N100000_P300_Q100_ftwSF_16cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_ftwSF_16cores
+++ cd Exp10752220_N100000_P300_Q100_ftwSF_16cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_ftwSF.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 16 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt ftwSF
+tid 657 affinity 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 658 affinity 01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 659 affinity 00100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 660 affinity 00010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 661 affinity 00001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 662 affinity 00000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 663 affinity 00000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 664 affinity 00000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 665 affinity 00000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 666 affinity 00000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 667 affinity 00000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 668 affinity 00000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 669 affinity 00000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 670 affinity 00000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 671 affinity 00000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 672 affinity 00000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_t_S_w.txt
+++ res=./results_f_t_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_t_S_w.txt
+++ python ../../../out/task_times.py time_ftwSF.txt
+++ python ../../../out/missed_time.py time_ftwSF.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 16 ftwSF time_ftwSF.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ T=1
++ flags=fswSF
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_fswSF_1cores
++++ ls -d 'Exp*_N100000_P300_Q100_fswSF_1cores'
+ls: cannot access Exp*_N100000_P300_Q100_fswSF_1cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_fswSF_1cores
+++ cd Exp10752220_N100000_P300_Q100_fswSF_1cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_fswSF.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 1 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt fswSF
+tid 690 affinity 11111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_s_S_w.txt
+++ res=./results_f_s_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_s_S_w.txt
+++ python ../../../out/task_times.py time_fswSF.txt
+++ python ../../../out/missed_time.py time_fswSF.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 1 fswSF time_fswSF.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ flags=ftwSF
++ for F in F N
++ flags=ftwSN
++ S=300
++ for Q in 010 020 050 100
++ '[' 300 -eq 400 ']'
++ '[' 300 -eq 200 ']'
++ '[' 300 -eq 300 ']'
++ L=07
++ '[' 300 -eq 100 ']'
++ '[' 300 -eq 050 ']'
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_ftwSN_1cores
++++ ls -d Exp10751474_N100000_P300_Q010_ftwSN_1cores
+++ ex=Exp10751474_N100000_P300_Q010_ftwSN_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10751474_N100000_P300_Q010_ftwSN_1coresz '!=' zz ']'
+++ cp Exp10751474_N100000_P300_Q010_ftwSN_1cores/trace_f_t_S_w.txt Exp10751474_N100000_P300_Q010_ftwSN_1cores/trace_N100000_P300_Q010_ftwSN_1cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_ftwSN_4cores
++++ ls -d Exp10751474_N100000_P300_Q010_ftwSN_4cores
+++ ex=Exp10751474_N100000_P300_Q010_ftwSN_4cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10751474_N100000_P300_Q010_ftwSN_4coresz '!=' zz ']'
+++ cp Exp10751474_N100000_P300_Q010_ftwSN_4cores/trace_f_t_S_w.txt Exp10751474_N100000_P300_Q010_ftwSN_4cores/trace_N100000_P300_Q010_ftwSN_4cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_ftwSN_8cores
++++ ls -d Exp10751474_N100000_P300_Q010_ftwSN_8cores
+++ ex=Exp10751474_N100000_P300_Q010_ftwSN_8cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10751474_N100000_P300_Q010_ftwSN_8coresz '!=' zz ']'
+++ cp Exp10751474_N100000_P300_Q010_ftwSN_8cores/trace_f_t_S_w.txt Exp10751474_N100000_P300_Q010_ftwSN_8cores/trace_N100000_P300_Q010_ftwSN_8cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_ftwSN_16cores
++++ ls -d Exp10751474_N100000_P300_Q010_ftwSN_16cores
+++ ex=Exp10751474_N100000_P300_Q010_ftwSN_16cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10751474_N100000_P300_Q010_ftwSN_16coresz '!=' zz ']'
+++ cp Exp10751474_N100000_P300_Q010_ftwSN_16cores/trace_f_t_S_w.txt Exp10751474_N100000_P300_Q010_ftwSN_16cores/trace_N100000_P300_Q010_ftwSN_16cores
+++ return
++ T=1
++ flags=fswSN
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q010_fswSN_1cores
++++ ls -d Exp10752043_N100000_P300_Q010_fswSN_1cores
+++ ex=Exp10752043_N100000_P300_Q010_fswSN_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q010_fswSN_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q010_fswSN_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q010_fswSN_1cores/trace_N100000_P300_Q010_fswSN_1cores
+cp: cannot stat `Exp10752043_N100000_P300_Q010_fswSN_1cores/trace_f_t_S_w.txt': No such file or directory
+++ return
++ flags=ftwSN
++ for Q in 010 020 050 100
++ '[' 300 -eq 400 ']'
++ '[' 300 -eq 200 ']'
++ '[' 300 -eq 300 ']'
++ L=07
++ '[' 300 -eq 100 ']'
++ '[' 300 -eq 050 ']'
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_ftwSN_1cores
++++ ls -d Exp10752043_N100000_P300_Q020_ftwSN_1cores
+++ ex=Exp10752043_N100000_P300_Q020_ftwSN_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_ftwSN_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_ftwSN_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_ftwSN_1cores/trace_N100000_P300_Q020_ftwSN_1cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_ftwSN_4cores
++++ ls -d Exp10752043_N100000_P300_Q020_ftwSN_4cores
+++ ex=Exp10752043_N100000_P300_Q020_ftwSN_4cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_ftwSN_4coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_ftwSN_4cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_ftwSN_4cores/trace_N100000_P300_Q020_ftwSN_4cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_ftwSN_8cores
++++ ls -d Exp10752043_N100000_P300_Q020_ftwSN_8cores
+++ ex=Exp10752043_N100000_P300_Q020_ftwSN_8cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_ftwSN_8coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_ftwSN_8cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_ftwSN_8cores/trace_N100000_P300_Q020_ftwSN_8cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_ftwSN_16cores
++++ ls -d Exp10752043_N100000_P300_Q020_ftwSN_16cores
+++ ex=Exp10752043_N100000_P300_Q020_ftwSN_16cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_ftwSN_16coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_ftwSN_16cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_ftwSN_16cores/trace_N100000_P300_Q020_ftwSN_16cores
+++ return
++ T=1
++ flags=fswSN
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q020_fswSN_1cores
++++ ls -d Exp10752043_N100000_P300_Q020_fswSN_1cores
+++ ex=Exp10752043_N100000_P300_Q020_fswSN_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q020_fswSN_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q020_fswSN_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q020_fswSN_1cores/trace_N100000_P300_Q020_fswSN_1cores
+cp: cannot stat `Exp10752043_N100000_P300_Q020_fswSN_1cores/trace_f_t_S_w.txt': No such file or directory
+++ return
++ flags=ftwSN
++ for Q in 010 020 050 100
++ '[' 300 -eq 400 ']'
++ '[' 300 -eq 200 ']'
++ '[' 300 -eq 300 ']'
++ L=07
++ '[' 300 -eq 100 ']'
++ '[' 300 -eq 050 ']'
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_ftwSN_1cores
++++ ls -d Exp10752043_N100000_P300_Q050_ftwSN_1cores
+++ ex=Exp10752043_N100000_P300_Q050_ftwSN_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_ftwSN_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_ftwSN_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_ftwSN_1cores/trace_N100000_P300_Q050_ftwSN_1cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_ftwSN_4cores
++++ ls -d Exp10752043_N100000_P300_Q050_ftwSN_4cores
+++ ex=Exp10752043_N100000_P300_Q050_ftwSN_4cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_ftwSN_4coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_ftwSN_4cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_ftwSN_4cores/trace_N100000_P300_Q050_ftwSN_4cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_ftwSN_8cores
++++ ls -d Exp10752043_N100000_P300_Q050_ftwSN_8cores
+++ ex=Exp10752043_N100000_P300_Q050_ftwSN_8cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_ftwSN_8coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_ftwSN_8cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_ftwSN_8cores/trace_N100000_P300_Q050_ftwSN_8cores
+++ return
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_ftwSN_16cores
++++ ls -d Exp10752043_N100000_P300_Q050_ftwSN_16cores
+++ ex=Exp10752043_N100000_P300_Q050_ftwSN_16cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_ftwSN_16coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_ftwSN_16cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_ftwSN_16cores/trace_N100000_P300_Q050_ftwSN_16cores
+++ return
++ T=1
++ flags=fswSN
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q050_fswSN_1cores
++++ ls -d Exp10752043_N100000_P300_Q050_fswSN_1cores
+++ ex=Exp10752043_N100000_P300_Q050_fswSN_1cores
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zExp10752043_N100000_P300_Q050_fswSN_1coresz '!=' zz ']'
+++ cp Exp10752043_N100000_P300_Q050_fswSN_1cores/trace_f_t_S_w.txt Exp10752043_N100000_P300_Q050_fswSN_1cores/trace_N100000_P300_Q050_fswSN_1cores
+cp: cannot stat `Exp10752043_N100000_P300_Q050_fswSN_1cores/trace_f_t_S_w.txt': No such file or directory
+++ return
++ flags=ftwSN
++ for Q in 010 020 050 100
++ '[' 300 -eq 400 ']'
++ '[' 300 -eq 200 ']'
++ '[' 300 -eq 300 ']'
++ L=07
++ '[' 300 -eq 100 ']'
++ '[' 300 -eq 050 ']'
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_ftwSN_1cores
++++ ls -d 'Exp*_N100000_P300_Q100_ftwSN_1cores'
+ls: cannot access Exp*_N100000_P300_Q100_ftwSN_1cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_ftwSN_1cores
+++ cd Exp10752220_N100000_P300_Q100_ftwSN_1cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_ftwSN.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 1 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt ftwSN
+tid 811 affinity 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_t_S_w.txt
+++ res=./results_f_t_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_t_S_w.txt
+++ python ../../../out/task_times.py time_ftwSN.txt
+++ python ../../../out/missed_time.py time_ftwSN.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 1 ftwSN time_ftwSN.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_ftwSN_4cores
++++ ls -d 'Exp*_N100000_P300_Q100_ftwSN_4cores'
+ls: cannot access Exp*_N100000_P300_Q100_ftwSN_4cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_ftwSN_4cores
+++ cd Exp10752220_N100000_P300_Q100_ftwSN_4cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_ftwSN.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 4 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt ftwSN
+tid 829 affinity 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 830 affinity 01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 831 affinity 00100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 832 affinity 00010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_t_S_w.txt
+++ res=./results_f_t_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_t_S_w.txt
+++ python ../../../out/task_times.py time_ftwSN.txt
+++ python ../../../out/missed_time.py time_ftwSN.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 4 ftwSN time_ftwSN.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_ftwSN_8cores
++++ ls -d 'Exp*_N100000_P300_Q100_ftwSN_8cores'
+ls: cannot access Exp*_N100000_P300_Q100_ftwSN_8cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_ftwSN_8cores
+++ cd Exp10752220_N100000_P300_Q100_ftwSN_8cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_ftwSN.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 8 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt ftwSN
+tid 853 affinity 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 854 affinity 01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 855 affinity 00100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 856 affinity 00010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 857 affinity 00001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 858 affinity 00000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 859 affinity 00000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 860 affinity 00000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_t_S_w.txt
+++ res=./results_f_t_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_t_S_w.txt
+++ python ../../../out/task_times.py time_ftwSN.txt
+++ python ../../../out/missed_time.py time_ftwSN.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 8 ftwSN time_ftwSN.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ for T in 1 4 8 16
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_ftwSN_16cores
++++ ls -d 'Exp*_N100000_P300_Q100_ftwSN_16cores'
+ls: cannot access Exp*_N100000_P300_Q100_ftwSN_16cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_ftwSN_16cores
+++ cd Exp10752220_N100000_P300_Q100_ftwSN_16cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_ftwSN.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 16 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt ftwSN
+tid 1082 affinity 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1083 affinity 01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1084 affinity 00100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1085 affinity 00010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1086 affinity 00001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1087 affinity 00000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1088 affinity 00000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1089 affinity 00000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1090 affinity 00000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1091 affinity 00000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1092 affinity 00000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1093 affinity 00000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1094 affinity 00000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1095 affinity 00000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1096 affinity 00000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tid 1097 affinity 00000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_t_S_w.txt
+++ res=./results_f_t_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_t_S_w.txt
+++ python ../../../out/task_times.py time_ftwSN.txt
+++ python ../../../out/missed_time.py time_ftwSN.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 16 ftwSN time_ftwSN.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ T=1
++ flags=fswSN
++ source ../main.sh
+++ lstopo --force --of TXT topology.TXT
+++ ACML_DIR=/pica/h1/afshin/acml/acmllib/ifort64_fma4
+++ ACML_LIB=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib/libacml.a
+++ export LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ LD_LIBRARY_PATH=/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/sw/comp/python/2.7.2_tintin/lib:/sw/libs/wxWidgets/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/pica/h1/afshin/acml/acmllib/ifort64_fma4/lib:/opt/openmpi/1.8.1gcc4.9/lib:/sw/comp/gcc/4.9_tintin/lib64:/sw/comp/gcc/4.9_tintin/lib
+++ expdir=Exp10752220_N100000_P300_Q100_fswSN_1cores
++++ ls -d 'Exp*_N100000_P300_Q100_fswSN_1cores'
+ls: cannot access Exp*_N100000_P300_Q100_fswSN_1cores: No such file or directory
+++ ex=
++++ pwd
+++ curd=/gulo/glob/afshin/private/FMM/out/N1e5
+++ '[' zz '!=' zz ']'
+++ mkdir Exp10752220_N100000_P300_Q100_fswSN_1cores
+++ cd Exp10752220_N100000_P300_Q100_fswSN_1cores
+++ app=../../../bin/fmm
+++ indir=../../../input
+++ Tree=../../../input/tree_N100000_L07_Q100_S300.txt
+++ Ops=../../../input/operators_N100000_L07_Q100_S300.txt
+++ ref=../../../input/result_N100000_L07_Q100_S300.txt
+++ out=time_fswSN.txt
+++ '[' '!' -f ../../../input/tree_N100000_L07_Q100_S300.txt ']'
+++ ../../../bin/fmm 100000 07 100 300 1 ../../../input/tree_N100000_L07_Q100_S300.txt ../../../input/operators_N100000_L07_Q100_S300.txt fswSN
+tid 1481 affinity 11111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
++++ ls ./results_f_s_S_w.txt
+++ res=./results_f_s_S_w.txt
+++ compare=../../../out/check_results.py
+++ task_times=../../../out/task_times.py
+++ missed=../../../out/missed_time.py
+++ dbrec=../../../out/dbrec.py
+++ ttimes=task_times.txt
+++ set +x
+++ python ../../../out/check_results.py ../../../input/result_N100000_L07_Q100_S300.txt ./results_f_s_S_w.txt
+++ python ../../../out/task_times.py time_fswSN.txt
+++ python ../../../out/missed_time.py time_fswSN.txt
+Traceback (most recent call last):
+  File "../../../out/missed_time.py", line 26, in <module>
+    n,f,b,m=load_file(fname)
+  File "../../../out/missed_time.py", line 23, in load_file
+    return mvnear,mvfar,barrier,fmm
+UnboundLocalError: local variable 'barrier' referenced before assignment
+++ python ../../../out/dbrec.py 100000 07 300 100 1 fswSN time_fswSN.txt task_times.txt
++++ ls '*.dot'
+++ cd /gulo/glob/afshin/private/FMM/out/N1e5
++ flags=ftwSN

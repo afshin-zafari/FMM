@@ -78,8 +78,7 @@ void fmm_solver(){
       #pragma omp single
       {
 	fprintf(stdout,"MatVec near field...\n");
-	if(FMM::config.NF)
-	  FMM::mv_near_field(OT,C,Q);            
+	FMM::mv_near_field(OT,C,Q);            
       
 	fprintf(stdout,"MatVec far field...\n");
 	if(FMM::config.FF)

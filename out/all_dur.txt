@@ -1,4 +1,9 @@
-100000 06 010 400 1 fswSMF100000 09 010 050 1 fswSMFN Program Finished. Time(s): 0.113793
+10000 05 010 100 1 fswSF Program Finished. Time(s): 0.00415087
+10000 05 010 100 16 ftwSF Program Finished. Time(s): 0.00327182
+10000 05 010 100 1 ftwSF Program Finished. Time(s): 0.00223088
+10000 05 010 100 4 ftwSF Program Finished. Time(s): 0.00269198
+10000 05 010 100 8 ftwSF Program Finished. Time(s): 0.00283408
+100000 09 010 050 1 fswSMFN Program Finished. Time(s): 0.113793
 100000 09 010 050 1 fswSMN Program Finished. Time(s): 0.0413079
 100000 09 010 050 16 ftwSMFN Program Finished. Time(s): 0.254103
 100000 09 010 050 1 ftwSMFN Program Finished. Time(s): 0.285655
@@ -103,18 +108,78 @@
 100000 06 010 400 1 ftwSMFN Program Finished. Time(s): 3.8618
 100000 06 010 400 4 ftwSMFN Program Finished. Time(s): 1.09677
 100000 06 010 400 8 ftwSMFN Program Finished. Time(s): 0.564407
-100000 06 020 400 1 fswSMF100000 06 020 400 1 fswSMFN Program Finished. Time(s): 0.398043
-100000 06 020 400 16 ftwSMF100000 06 020 400 4 ftwSMF100000 06 020 400 8 ftwSMF100000 06 020 400 16 ftwSMFN Program Finished. Time(s): 0.398166
+100000 06 020 400 1 fswSMFN Program Finished. Time(s): 0.398043
+100000 06 020 400 16 ftwSMFN Program Finished. Time(s): 0.398166
 100000 06 020 400 1 ftwSMFN Program Finished. Time(s): 3.87
 100000 06 020 400 4 ftwSMFN Program Finished. Time(s): 1.09482
 100000 06 020 400 8 ftwSMFN Program Finished. Time(s): 0.566883
-100000 06 050 400 1 fswSMF100000 06 050 400 1 fswSMFN Program Finished. Time(s): 0.400804
-100000 06 050 400 16 ftwSMF100000 06 050 400 1 ftwSMF100000 06 050 400 4 ftwSMF100000 06 050 400 8 ftwSMF100000 06 050 400 16 ftwSMFN Program Finished. Time(s): 0.399968
+100000 06 050 400 1 fswSMFN Program Finished. Time(s): 0.400804
+100000 06 050 400 16 ftwSMFN Program Finished. Time(s): 0.399968
 100000 06 050 400 1 ftwSMFN Program Finished. Time(s): 3.89777
 100000 06 050 400 4 ftwSMFN Program Finished. Time(s): 1.10617
 100000 06 050 400 8 ftwSMFN Program Finished. Time(s): 0.571838
-100000 06 100 400 1 fswSMF100000 06 100 400 1 fswSMFN Program Finished. Time(s): 0.407766
-100000 06 100 400 16 ftwSMF100000 06 100 400 1 ftwSMF100000 06 100 400 4 ftwSMF100000 06 100 400 8 ftwSMF100000 06 100 400 16 ftwSMFN Program Finished. Time(s): 0.406949
+100000 06 100 400 1 fswSMFN Program Finished. Time(s): 0.407766
+100000 06 100 400 16 ftwSMFN Program Finished. Time(s): 0.406949
 100000 06 100 400 1 ftwSMFN Program Finished. Time(s): 3.94241
 100000 06 100 400 4 ftwSMFN Program Finished. Time(s): 1.07783
 100000 06 100 400 8 ftwSMFN Program Finished. Time(s): 0.583493
+100000 09 010 050 1 fswSMF Program Finished. Time(s): 0.121147
+100000 09 010 050 16 ftwSMF Program Finished. Time(s): 0.143911
+100000 09 010 050 1 ftwSMF Program Finished. Time(s): 0.0722659
+100000 09 010 050 4 ftwSMF Program Finished. Time(s): 0.072325
+100000 09 010 050 8 ftwSMF Program Finished. Time(s): 0.0779598
+100000 09 020 050 1 fswSMF Program Finished. Time(s): 0.124912
+100000 09 020 050 16 ftwSMF Program Finished. Time(s): 0.18357
+100000 09 020 050 1 ftwSMF Program Finished. Time(s): 0.0861199
+100000 09 020 050 4 ftwSMF Program Finished. Time(s): 0.076194
+100000 09 020 050 8 ftwSMF Program Finished. Time(s): 0.0739732
+100000 09 050 050 1 fswSMF Program Finished. Time(s): 0.119329
+100000 09 050 050 16 ftwSMF Program Finished. Time(s): 0.163109
+100000 09 050 050 1 ftwSMF Program Finished. Time(s): 0.153376
+100000 09 050 050 4 ftwSMF Program Finished. Time(s): 0.08249
+100000 09 050 050 8 ftwSMF Program Finished. Time(s): 0.071734
+100000 09 100 050 1 fswSMF Program Finished. Time(s): 0.098943
+100000 09 100 050 16 ftwSMF Program Finished. Time(s): 0.0991709
+100000 09 100 050 1 ftwSMF Program Finished. Time(s): 0.306605
+100000 09 100 050 4 ftwSMF Program Finished. Time(s): 0.122627
+100000 09 100 050 8 ftwSMF Program Finished. Time(s): 0.0875149
+100000 07 010 300 1 fswSMF Program Finished. Time(s): 0.0489709
+100000 07 010 300 16 ftwSMF Program Finished. Time(s): 0.0484259
+100000 07 010 300 1 ftwSMF Program Finished. Time(s): 0.023783
+100000 07 010 300 4 ftwSMF Program Finished. Time(s): 0.018656
+100000 07 010 300 8 ftwSMF Program Finished. Time(s): 0.0179319
+100000 07 020 300 1 fswSMF Program Finished. Time(s): 0.0464661
+100000 07 020 300 16 ftwSMF Program Finished. Time(s): 0.0484328
+100000 07 020 300 1 ftwSMF Program Finished. Time(s): 0.031852
+100000 07 020 300 4 ftwSMF Program Finished. Time(s): 0.0215981
+100000 07 020 300 8 ftwSMF Program Finished. Time(s): 0.0186191
+100000 07 050 300 1 fswSMF Program Finished. Time(s): 0.033622
+100000 07 050 300 16 ftwSMF Program Finished. Time(s): 0.0311191
+100000 07 050 300 1 ftwSMF Program Finished. Time(s): 0.0702291
+100000 07 050 300 4 ftwSMF Program Finished. Time(s): 0.0308149
+100000 07 050 300 8 ftwSMF Program Finished. Time(s): 0.0236521
+100000 07 100 300 1 fswSMF Program Finished. Time(s): 0.0330369
+100000 07 100 300 16 ftwSMF Program Finished. Time(s): 0.0367339
+100000 07 100 300 1 ftwSMF Program Finished. Time(s): 0.134354
+100000 07 100 300 4 ftwSMF Program Finished. Time(s): 0.048552
+100000 07 100 300 8 ftwSMF Program Finished. Time(s): 0.0349669
+100000 06 010 400 1 fswSMF Program Finished. Time(s): 0.00960493
+100000 06 010 400 16 ftwSMF Program Finished. Time(s): 0.0117671
+100000 06 010 400 1 ftwSMF Program Finished. Time(s): 0.0138071
+100000 06 010 400 4 ftwSMF Program Finished. Time(s): 0.00927615
+100000 06 010 400 8 ftwSMF Program Finished. Time(s): 0.00839686
+100000 06 020 400 1 fswSMF Program Finished. Time(s): 0.0095799
+100000 06 020 400 16 ftwSMF Program Finished. Time(s): 0.010164
+100000 06 020 400 1 ftwSMF Program Finished. Time(s): 0.021076
+100000 06 020 400 4 ftwSMF Program Finished. Time(s): 0.0113652
+100000 06 020 400 8 ftwSMF Program Finished. Time(s): 0.00901103
+100000 06 050 400 1 fswSMF Program Finished. Time(s): 0.014786
+100000 06 050 400 16 ftwSMF Program Finished. Time(s): 0.0158749
+100000 06 050 400 1 ftwSMF Program Finished. Time(s): 0.0527151
+100000 06 050 400 4 ftwSMF Program Finished. Time(s): 85.0747
+100000 06 050 400 8 ftwSMF Program Finished. Time(s): 0.0150101
+100000 06 100 400 1 fswSMF Program Finished. Time(s): 0.020524
+100000 06 100 400 16 ftwSMF Program Finished. Time(s): 0.0214541
+100000 06 100 400 1 ftwSMF Program Finished. Time(s): 0.097085
+100000 06 100 400 4 ftwSMF Program Finished. Time(s): 0.035605
+100000 06 100 400 8 ftwSMF Program Finished. Time(s): 0.0233531

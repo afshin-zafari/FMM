@@ -63,16 +63,19 @@ namespace FMM{
   }
   /*----------------------------------------------------------------------------*/
   void gemv_leaves(SGMatrix &V, SGMatrix &x, SGMatrix &S, int group){
-    SGTaskGemv *t= new SGTaskGemv(V,x,group,S,group);
+    TL;
+    cout << group << endl;
     assert(V.get_matrix());
     assert(S.get_part(group).get_matrix());
     assert(x.get_part(group).get_matrix());
+    SGTaskGemv *t= new SGTaskGemv(V,x,group,S,group);
     t->type=1;
     t->set_name("Vx->s");
     submit(t);
   }
   /*----------------------------------------------------------------------------*/
   void gemv_upward(SGMatrix &M2M, SGMatrix &v, int i1,SGMatrix &y,int i2){
+    TL;
     assert(M2M.get_matrix());
     assert(v.get_part(i1).get_matrix());
     assert(y.get_part(i2).get_matrix());
@@ -83,6 +86,7 @@ namespace FMM{
   }
   /*----------------------------------------------------------------------------*/
   void gemv_translation(SGMatrix &M2M, SGMatrix &v, int i1,SGMatrix &y,int i2){
+    TL;
     assert(M2M.get_matrix());
     assert(v.get_part(i1).get_matrix());
     assert(y.get_part(i2).get_matrix());
@@ -97,6 +101,7 @@ namespace FMM{
   }
   /*----------------------------------------------------------------------------*/
   void gemv_final(SGMatrix &A, SGMatrix &v, int i, SGMatrix &y){
+    TL;
     assert(A.get_matrix());
     assert(v.get_part(i).get_matrix());
     assert(y.get_part(i).get_matrix());
@@ -108,6 +113,7 @@ namespace FMM{
   }
   /*----------------------------------------------------------------------------*/
   void gemv_downward(SGMatrix &A, SGMatrix &x, SGMatrix &y,int i ){
+    TL;
     assert(A.get_matrix());
     assert(x.get_part(i).get_matrix());
     assert(y.get_part(i).get_matrix());
@@ -119,6 +125,7 @@ namespace FMM{
   }
   /*----------------------------------------------------------------------------*/
   void gemv_down_obs(SGMatrix &A, SGMatrix &v, int i1, SGMatrix &y, int i2){
+    TL;
     assert(A.get_matrix());
     assert(v.get_part(i1).get_matrix());
     assert(y.get_part(i2).get_matrix());

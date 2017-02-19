@@ -1,0 +1,7 @@
+average distance between tasks' events in microseconds
+submit-run 	 run-finish 	 finish-destr 	   count 	 type 
+   882.58 	     26.49 	     31.06 	     256 	 Leaves->Second Last
+     5.93 	      1.16 	      1.36 	     444 	 Upward
+     1.97 	      1.03 	      1.32 	    1264 	 Translation
+     1.75 	     20.60 	      1.88 	     256 	 Second Last->Leaves
+     2.12 	      0.99 	      1.27 	     444 	 Downward

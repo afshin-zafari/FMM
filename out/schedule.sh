@@ -11,7 +11,7 @@
 
 module load python/3.5.0
 
-list=$(ls -R N1e5/*MFN*/*tra*_t_*.txt)
+list=$(ls -R N1e5/*M*/*tra*_t_*.txt)
 
 for f in $list
 do
