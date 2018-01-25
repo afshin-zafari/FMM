@@ -1,6 +1,8 @@
 # Compiling the Program
 
  `OMP_TASKS`	if defined, the OMP task is used for computations.
+ `FMM_3D`	if defined, the FMM will be run for 3D boxes.
+
 
 
 # Running the Program
@@ -44,3 +46,5 @@ app N L Q P T Tree ops flags
 
    `M`   use OpenMP tasks
 
+# Implementation Overview
+`gemv` is the main computation routine in the algorithm. Different instances of `gemv_<nnnn>` are created for computations for leaves, upward (child-to-parent) and downward (parent-to-children) the tree and for translation operations within levels. Corresponding names appear in trace output of SuperGlue.
